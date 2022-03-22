@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Communicazion</title>
+        
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+    
+        <style>
+        
+            #sample {
+                background-color: blue;
+                width: 100px;
+                height: 10px;
+            }
+        
+        </style>
+        
+    </head>
+    <body>
+
+        <div id="sample"></div>
+        <button onclick='socket.emit("hello"); '>Hello Server</button> 
+
+        <script>
+
+            var socket = io();
+            socket.on('data', function(data){
+
+                console.log(data);
+
+                document.getElementById('sample').style.opacity = data+"%"; 
+
+            });
+
+         </script>
+    </body>
+</html>
