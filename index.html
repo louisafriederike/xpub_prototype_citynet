@@ -2,9 +2,10 @@
 <html>
     <head>
         <title>Communicazion</title>
-        
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+        <link href="style.css" rel="stylesheet">
         <script src="p5.geolocation.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+
         <script>
             let lat, lon;
             if ('geolocation' in navigator) {
@@ -80,5 +81,48 @@
             });
 
          </script>
+         <section id="home">
+            <h2>Identity Verification</h2>
+            <p>please verify identity below.</p>
+            <p><span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span></p>
+            </section>
+            
+            <section id="pigeon">
+            <h2><span>&raquo;verification successful</span></h2>
+            <p>welcome back, ella.</p><br>
+            <p>Uh Ah CHA CHA CHA, 10 steps to the left, AH AH turn left, 9 steps to the left UH UH my favourite hat.</p></section>
+            </section>
+            
+            <section id="usage">
+            <h2><span>&raquo;Usage</span></h2>
+            <p>Use me.</p>
+            </section>
+            
+            <section id="download">
+            <h2><span>&raquo;Download</span></h2>
+            <p>You wouldn't download a house.</p>
+            </section>
+            
+            <section id="error">
+            <p>Command not found!<p> 
+            <p><span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span></p>
+            </section>
+            
+            <section id="help">
+            <h2><span>&raquo;Help?</span></h2>
+            <p><span>Type [command] + <kbd>Enter</kbd></span>lingering in a mirror world was the truth to a puzzle which was not meant to be solved.</p>
+            <ul>
+                <li>'home' -- Thats obvious!</li>
+                <li>'about' -- What's this for</li>
+                <li>'help' -- displays this list</li>
+            </ul>
+            </section>
+            
+            <span class="command">wiredworld:/$<input type="text"></span>
+            </main>
+            
+            
+            <script src="chat.js"></script>
+            </body>
     </body>
 </html>
