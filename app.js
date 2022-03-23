@@ -30,6 +30,9 @@ var app = http.createServer(function(req, res){
 
 });
 
+
+
+
 var io = require('socket.io').listen(app);
 
 io.on('connection', function(socket){
@@ -39,6 +42,10 @@ io.on('connection', function(socket){
     console.log("hellohelo"); // "world"
     io.emit('world');
 
+    }); 
+
+    socket.on('chat message', (msg) => {
+        console.log('message: ' + msg);
     }); 
 
 
