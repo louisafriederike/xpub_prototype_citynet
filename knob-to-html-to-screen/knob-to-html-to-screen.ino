@@ -3,7 +3,6 @@
 #include <SPI.h>
 #include <Wire.h>
 
-
 int percent = 0;
 int prevPercent = 0;
 
@@ -25,13 +24,18 @@ void loop(void) {
     prevPercent = percent;
     
   }
-  
-  delay(100);
-  
-  u8g2.firstPage();
-  do {
-    u8g2.setFont(u8g2_font_ncenB14_tr);
-    u8g2.drawStr(0,12,"shut me off...");
-    u8g2.drawStr(1,12,"one last time...");
-  } while ( u8g2.nextPage() );
+
+  if(Serial.available()){
+
+    String incomingString = Serial.readString(); 
+    char Buf[50];
+    incomingString.toCharArray(Buf, 12);
+    u8g2.firstPage();
+      do {
+        u8g2.setFont(u8g2_font_ncenB14_tr);
+        u8g2.drawStr(0,12, Buf);
+      } while ( u8g2.nextPage() );
+    u8g2.drawStr(0,12, Buf);
+  }
 }
+ 
