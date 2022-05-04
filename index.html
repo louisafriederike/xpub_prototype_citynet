@@ -1,14 +1,16 @@
 <!doctype html>
 <html>
     <head>
-        <title>Communicazion</title>
+        <title>MHz</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <link href="style.css" rel="stylesheet">
         <script src="p5.geolocation.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
 
         <script>
             let lat, lon;
-            if ('geolocation' in navigator) {
+   
+                if ('geolocation' in navigator) {
             console.log('geolocation available');
             navigator.geolocation.getCurrentPosition(async position => {
                 let lat, lon, weather, air;
@@ -49,6 +51,19 @@
             } else {
             console.log('geolocation not available');
             }
+
+            
+        </script>
+
+        <script>
+            var fence;
+            function setup(){
+                fence = new geoFenceCircle(51.444273, 3.569749, 0.05)
+            }
+
+            function draw(){
+            print(fence.insideFence);
+            }
         </script>
         <style>
         
@@ -59,19 +74,34 @@
             }
         
         </style>
-        
+          <img src="868-icon_blue.png" width="50px" id="icon"></img>
     </head>
     <body>
-        <p>
-            Your location is <span id="latitude"></span>&deg;,
-            <span id="longitude"></span>&deg;<span id="summary"></span>.
-        </p>
+      
+        
+            <p id="gw1"> gateway    8681                         19.05.2022    <p>
+                open gateway at <span id="latitude"></span>&deg;,
+                <span id="longitude" &deg;></span><span id="summary"></span>&deg;
+            </p> <p>    
+            <p id="gw2"> gateway    0002                         19.05.2022   <p>    
+            <p id="gw3"> gateway    0003                         19.05.2022   <p>    
+            <p id="gw4"> gateway    0004                         19.05.2022   <p>    
+            <p id="gw5"> gateway    0005                         19.05.2022   <p>   
+            <p id="gw6"> gateway    0006                         19.05.2022   <p>   
+            <p id="gw7"> gateway    0007                         19.05.2022   <p>    
+            <p id="gw8"> gateway    0008                         19.05.2022   <p>   
+            <p id="gw9"> gateway    0009                         19.05.2022   <p>   <br> 
+             
+          
+      
         <div id="sample"></div>
         <button onclick='socket.emit("hello"); '>Hello Server</button> 
       
         <form id="form" action="">
             <input id="input" autocomplete="off" /><button>Send</button>
         </form> 
+
+
 
         <script>
 
@@ -138,6 +168,6 @@
             
             
             <script src="chat.js"></script>
-            </body>
-    </body>
+        </body>
+
 </html>

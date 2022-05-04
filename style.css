@@ -18,15 +18,14 @@
  }
  
  html {
-   background: #fff;
+   background: rgb(0, 0, 0);
    overflow-y: scroll; 
  }
  
  body {
    font: .875em/1.6 'Inconsolata', monospace;
-   color: #181818;
+   color: #ffffff;
    font-weight: 400;
-   max-width: 28em;
    padding: 1em;
    margin: 5% 0; 
  }
@@ -40,11 +39,11 @@
    background: #eee
  }
  a{
-   color: #181818;
+   color: #d03400;
  }
  a:hover,a:focus{
    background: #181818;
-   color:#fff;
+   color:rgb(255, 0, 0);
  }
  h2{
    font-size: 1em;
@@ -83,14 +82,14 @@
    padding:0 .5em;
  }
  input[type="text"]:focus{
-   background: #fff;
+   background: rgb(255, 255, 255);
    color: #000;
    outline:none;
  }
  .command{
    display: block;
    max-width: 20em;
-   color: #181818;
+   color: red;
    font-weight: 700;
    margin: 2em 0;
  }
@@ -108,3 +107,52 @@
    width: 100px;
    height: 10px;
  }
+
+ #gw1{
+  background-color: orangered;
+ }
+
+ #gw2{
+  background-color: orangered;
+ }
+
+ #gw3{
+  background-color: orangered;
+ }
+
+ #gw4{
+  background-color: orangered;
+ }
+
+ #gw5{
+  background-color: green;
+ }
+
+ #gw6{
+  background-color: red;
+ }
+
+ #gw7{
+  background-color: orangered;
+ }
+
+ #gw8{
+  background-color: green;
+ }
+
+ #gw9{
+  background-color: green;
+ }
+
+#icon{
+ animation: rotate 20s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
