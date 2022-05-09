@@ -20,9 +20,9 @@ window.onload = function() {
         $("#distance").text(distance);
 
         if(distance < .05){
-          $("#message").text("Yes, were inside .05 KM!!! :) A+")
+          $("#message").text("You are within reach of gateway 1.")
         }else if(distance > .05){
-          $("#message").text("No, not inside .05 KM :(")
+          $("#message").text("You are outside reach of gateway 1.")
         }
       });
     }
