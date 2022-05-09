@@ -1,108 +1,79 @@
 <!doctype html>
 <html>
     <head>
-        <title>MHz</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>868mhz.net</title>
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
         <link href="style.css" rel="stylesheet">
         <script src="p5.geolocation.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
-
-        <script>
-            let lat, lon;
-   
-                if ('geolocation' in navigator) {
+    </head>
+<body>
+    <script>
+        let lat, lon;
+            if ('geolocation' in navigator) {
             console.log('geolocation available');
             navigator.geolocation.getCurrentPosition(async position => {
                 let lat, lon, weather, air;
                 try {
-                lat = position.coords.latitude;
-                lon = position.coords.longitude;
-                document.getElementById('latitude').textContent = lat.toFixed(2);
-                document.getElementById('longitude').textContent = lon.toFixed(2);
-                const api_url = `weather/${lat},${lon}`;
-                const response = await fetch(api_url);
-                const json = await response.json();
-                weather = json.weather.currently;
-                air = json.air_quality.results[0].measurements[0];
-                document.getElementById('summary').textContent = weather.summary;
-                document.getElementById('temp').textContent = weather.temperature;
-                document.getElementById('aq_parameter').textContent = air.parameter;
-                document.getElementById('aq_value').textContent = air.value;
-                document.getElementById('aq_units').textContent = air.unit;
-                document.getElementById('aq_date').textContent = air.lastUpdated;
-                } catch (error) {
-                console.error(error);
-                air = { value: -1 };
-                document.getElementById('aq_value').textContent = 'NO READING';
-                }
-    
-                const data = { lat, lon, weather, air };
-                const options = {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-                };
-                const db_response = await fetch('/api', options);
-                const db_json = await db_response.json();
-                console.log(db_json);
-            });
-            } else {
-            console.log('geolocation not available');
-            }
+                    lat = position.coords.latitude;
+                    lon = position.coords.longitude;
+                    document.getElementById('latitude').textContent = lat.toFixed(2);
+                    document.getElementById('longitude').textContent = lon.toFixed(2);
+                    const api_url = `weather/${lat},${lon}`;
+                    const response = await fetch(api_url);
+                    const json = await response.json();
+                    weather = json.weather.currently;
+                    air = json.air_quality.results[0].measurements[0];
+                    document.getElementById('summary').textContent = weather.summary;
+                    document.getElementById('temp').textContent = weather.temperature;
+                    document.getElementById('aq_parameter').textContent = air.parameter;
+                    document.getElementById('aq_value').textContent = air.value;
+                    document.getElementById('aq_units').textContent = air.unit;
+                    document.getElementById('aq_date').textContent = air.lastUpdated;
+                    } catch (error) {
+                    console.error(error);
+                    air = { value: -1 };
+                    document.getElementById('aq_value').textContent = 'NO READING';
+                    }
 
-            
-        </script>
+            const data = { lat, lon, weather, air };
+            const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+            };
+            const db_response = await fetch('/api', options);
+            const db_json = await db_response.json();
+            console.log(db_json);
+        });
+        } else {
+        console.log('geolocation not available');
+        }
+        
+    </script>
+    <img src="img/868.png" width="200vw" id="icon"></img>
 
-        <script>
-            var fence;
-            function setup(){
-                fence = new geoFenceCircle(51.444273, 3.569749, 0.05)
-            }
+    <h1>gateway overview</h1>
+    <p>step over</p>
+    <p>user ezn not found</p>
 
-            function draw(){
-            print(fence.insideFence);
-            }
-        </script>
-        <style>
-        
-            #sample {
-                background-color: blue;
-                width: 100px;
-                height: 10px;
-            }
-        
-        </style>
-          <img src="868-icon_blue.png" width="50px" id="icon"></img>
-    </head>
-    <body>
-      
-        
-            <p id="gw1"> gateway    8681                         19.05.2022    <p>
-                open gateway at <span id="latitude"></span>&deg;,
-                <span id="longitude" &deg;></span><span id="summary"></span>&deg;
-            </p> <p>    
-            <p id="gw2"> gateway    0002                         19.05.2022   <p>    
-            <p id="gw3"> gateway    0003                         19.05.2022   <p>    
-            <p id="gw4"> gateway    0004                         19.05.2022   <p>    
-            <p id="gw5"> gateway    0005                         19.05.2022   <p>   
-            <p id="gw6"> gateway    0006                         19.05.2022   <p>   
-            <p id="gw7"> gateway    0007                         19.05.2022   <p>    
-            <p id="gw8"> gateway    0008                         19.05.2022   <p>   
-            <p id="gw9"> gateway    0009                         19.05.2022   <p>   <br> 
-             
-          
-      
-        <div id="sample"></div>
-        <button onclick='socket.emit("hello"); '>Hello Server</button> 
-      
+    <div class="left">
+        <p>objective<br>
+            locate port to bridge communication with user ezn</p>
+    </div>
+
+    <div class="main">
+    <p>inside gateway 2</p>
+    </div>
+
+    <div class="right">
+        <p>listening on port 1299</p>
         <form id="form" action="">
-            <input id="input" autocomplete="off" /><button>Send</button>
+            <input id="input" autocomplete="off" /><button>send</button>
         </form> 
-
-
-
         <script>
 
             var socket = io();
@@ -124,50 +95,7 @@
                 input.value = '';
                 }
             }); 
-
-         </script>
-         <section id="home">
-            <h2>Identity Verification</h2>
-            <p>please verify identity below.</p>
-            <p><span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span></p>
-            </section>
-            
-            <section id="pigeon">
-            <h2><span>&raquo;verification successful</span></h2>
-            <p>welcome back, ella.</p><br>
-            <p>Uh Ah CHA CHA CHA, 10 steps to the left, AH AH turn left, 9 steps to the left UH UH my favourite hat.</p></section>
-            </section>
-            
-            <section id="usage">
-            <h2><span>&raquo;Usage</span></h2>
-            <p>Use me.</p>
-            </section>
-            
-            <section id="download">
-            <h2><span>&raquo;Download</span></h2>
-            <p>You wouldn't download a house.</p>
-            </section>
-            
-            <section id="error">
-            <p>Command not found!<p> 
-            <p><span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span></p>
-            </section>
-            
-            <section id="help">
-            <h2><span>&raquo;Help?</span></h2>
-            <p><span>Type [command] + <kbd>Enter</kbd></span>lingering in a mirror world was the truth to a puzzle which was not meant to be solved.</p>
-            <ul>
-                <li>'home' -- Thats obvious!</li>
-                <li>'about' -- What's this for</li>
-                <li>'help' -- displays this list</li>
-            </ul>
-            </section>
-            
-            <span class="command">wiredworld:/$<input type="text"></span>
-            </main>
-            
-            
-            <script src="chat.js"></script>
-        </body>
-
+        </script>
+    </div>
+</body>
 </html>
