@@ -1,21 +1,30 @@
 var http = require('http');
 var fs = require('fs');
+var express = require('express');
+var app = express();
+// var index = fs.readFileSync('index.html');
+var server = http.createServer(app);
 
-var index = fs.readFileSync('index.html');
-
-var app = http.createServer(function(req, res){
-
-    res.writeHead(200, {'Content-Type':'text/html'});
-
-    res.end(index);
-
+server.listen(port, () => {
+    console.log("Server is listening at port %d", port);
 });
 
-var io = require('socket.io').listen(app);
+app.use(express.static(path.join(__dirname, "public")));
+
+
+// var server = http.createServer(function(req, res){
+
+//     res.writeHead(200, {'Content-Type':'text/html'});
+
+//     res.end(index);
+
+// });
+
+// var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){
 
-    console.log('Node.js is listening!!!!!!!!');
+    console.log('Node.js is listening!!');
     socket.on("hello", (arg, callback) => {
     console.log("hellohelo"); // "world"
     io.emit('world');
@@ -30,4 +39,4 @@ io.on('connection', function(socket){
 
 
 
-app.listen(5501);
+// app.listen(5501);
