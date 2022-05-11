@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font: .875em/1.6 'Inconsolata', monospace;
+    color: #ffffff;
+    font-weight: 400;
+    padding: 1em;
+    margin: 5% 0; 
+    background-color: black;
+
+  }
+
+.left, .right {
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+.main {
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+#icon{
+    position: absolute;
+     top: 8%;
+     left: 50%;
+     transform: translate(-50%, -50%); 
+     animation: rotate 20s infinite;
+    }
+    
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg)
+      }
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 2px rgb(15, 7, 255), 0 0 2px #fff;
+      }
+      to {
+        text-shadow: 0 0 2px #fff, 0 0 1px #b6dbff, 0 0 3px #8673e4;
+      }
+>>>>>>> 2f8020dae4bcc9e11d066ce35fe33e256383fb3c
+    }
