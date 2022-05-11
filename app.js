@@ -2,8 +2,10 @@ var http = require('http');
 var fs = require('fs');
 var express = require('express');
 var app = express();
+var path = require('path');
 // var index = fs.readFileSync('index.html');
 var server = http.createServer(app);
+var port = 8000;
 
 server.listen(port, () => {
     console.log("Server is listening at port %d", port);
@@ -20,7 +22,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // });
 
-// var io = require('socket.io').listen(server);
+var io = require('socket.io')(server);
 
 io.on('connection', function(socket){
 
@@ -40,4 +42,3 @@ io.on('connection', function(socket){
 
 
 // app.listen(5501);
->>>>>>> 2f8020dae4bcc9e11d066ce35fe33e256383fb3c
