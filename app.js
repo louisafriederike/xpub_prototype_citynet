@@ -6,6 +6,14 @@ var path = require('path');
 // var index = fs.readFileSync('index.html');
 var server = http.createServer(app);
 var port = 8000;
+const { SerialPort } = require('serialport');
+
+
+const port = new SerialPort({
+  path: '/dev/ttyUSB0',
+  baudRate: 9600,
+})
+
 
 server.listen(port, () => {
     console.log("Server is listening at port %d", port);
