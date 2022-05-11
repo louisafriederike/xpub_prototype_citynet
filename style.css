@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
   }
@@ -54,4 +53,5 @@
       to {
         text-shadow: 0 0 2px #fff, 0 0 1px #b6dbff, 0 0 3px #8673e4;
       }
+>>>>>>> 2f8020dae4bcc9e11d066ce35fe33e256383fb3c
     }
