@@ -10,9 +10,7 @@
     padding: 1em;
     margin: 5% 0; 
     background-color: black;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
+
   }
 
 .left, .right {
@@ -51,9 +49,9 @@
 
     @-webkit-keyframes glow {
       from {
-        text-shadow: 0 0 2px rgb(255, 73, 7), 0 0 2px #fff;
+        text-shadow: 0 0 2px rgb(15, 7, 255), 0 0 2px #fff;
       }
       to {
-        text-shadow: 0 0 2px #fff, 0 0 1px #f7c66c, 0 0 3px #ffb120;
+        text-shadow: 0 0 2px #fff, 0 0 1px #b6dbff, 0 0 3px #8673e4;
       }
     }

@@ -1,3 +1,4 @@
+
 var http = require('http');
 var fs = require('fs');
 
@@ -11,11 +12,11 @@ var app = http.createServer(function(req, res){
 
 });
 
-var io = require('socket.io').listen(app);
+var io = require('socket.io')(app);
 
 io.on('connection', function(socket){
 
-    console.log('Node.js is listening!!!!!!!!');
+    console.log('Node.js is listening!!');
     socket.on("hello", (arg, callback) => {
     console.log("hellohelo"); // "world"
     io.emit('world');
@@ -30,4 +31,4 @@ io.on('connection', function(socket){
 
 
 
-app.listen(5501);
+app.listen(8000);
