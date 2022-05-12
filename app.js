@@ -6,14 +6,13 @@ var path = require('path');
 // var index = fs.readFileSync('index.html');
 var server = http.createServer(app);
 var port = 8000;
-const { SerialPort } = require('serialport');
 
+const { SerialPort } = require('serialport')
+const { ReadlineParser } = require('@serialport/parser-readline')
+const sport = new SerialPort({ path: '/dev/ttyACM0', baudRate: 115200 })
 
-const port = new SerialPort({
-  path: '/dev/ttyUSB0',
-  baudRate: 9600,
-})
-
+const parser = sport.pipe(new ReadlineParser({ delimiter: '\r\n' }))
+parser.on('data', console.log)
 
 server.listen(port, () => {
     console.log("Server is listening at port %d", port);
@@ -33,7 +32,17 @@ app.use(express.static(path.join(__dirname, "public")));
 var io = require('socket.io')(server);
 
 io.on('connection', function(socket){
+     
 
+
+  parser.on('data', function(data) {    
+  
+  const msg = data.split(' ');
+  console.log(msg[0], msg[1]);
+  io.emit(msg[0], msg[1]);
+    
+});
+    
     console.log('Node.js is listening!!');
     socket.on("hello", (arg, callback) => {
     console.log("hellohelo"); // "world"
