@@ -6,8 +6,8 @@ window.onload = function() {
   
     if (navigator.geolocation) {
 
-      startPosLat = 51.93467378982964;
-      startPosLong = 4.481640211658869;
+      startPosLat = 51.91575615609297;
+      startPosLong = 4.476337286922251;
 
       $("#startLat").text(startPosLat);
       $("#startLon").text(startPosLong);
