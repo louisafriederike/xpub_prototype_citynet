@@ -31,7 +31,7 @@
 
 #icon{
     position: absolute;
-     top: 8%;
+     bottom: 6%;
      left: 50%;
      transform: translate(-50%, -50%); 
      animation: rotate 20s infinite;
@@ -53,5 +53,12 @@
       to {
         text-shadow: 0 0 2px #fff, 0 0 1px #b6dbff, 0 0 3px #8673e4;
       }
->>>>>>> 2f8020dae4bcc9e11d066ce35fe33e256383fb3c
+
+    }
+
+    #gateway-distance{
+
+     text-align: center;
+     font: 1.2em/1.6 'Inconsolata', monospace;
+
     }

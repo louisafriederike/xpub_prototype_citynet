@@ -19,10 +19,10 @@ window.onload = function() {
         distance = calculateDistance(startPosLat, startPosLong,position.coords.latitude, position.coords.longitude)
         $("#distance").text(distance);
 
-        if(distance < .05){
-          $("#message").text("You are within reach of gateway 1.")
-        }else if(distance > .05){
-          $("#message").text("You are outside reach of gateway 1.")
+        if(distance < .01){
+          $("#message").text("You are within reach of Gateway 1.")
+        }else if(distance > .01){
+          $("#message").text("You are outside reach of Gateway 1.")
         }
       });
     }
