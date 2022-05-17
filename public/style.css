@@ -126,3 +126,6 @@ button{
   appearance: none;
 }
 
+#log{
+  visibility: hidden;
+}

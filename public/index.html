@@ -112,6 +112,10 @@
                                     input.value = '';
 
                                 }
+                                // else{
+                                //     $("#objective").text("connecting failed, inactive port. Enter correct port number to connect.");
+
+                                // }
                             }); 
                         </script>
                         </div>
@@ -143,6 +147,16 @@
                                     </p>                               
                                 </div>
                         </div>
+
+                        <div class="section" id="log">
+                         <p>log 1           03:00:00         13-05-22<br></p>
+                         <p> log 2           03:00:00         13-05-22<br></p>
+                            <p>  log 2           03:00:00         13-05-22<br></p>
+                                <p>   log 3           03:00:00         13-05-22<br></p>
+                                    <p>   log 4           03:00:00         13-05-22<br></p>
+                                        <p>   log 5           03:00:00         13-05-22<br></p>
+                                            <p>   log 6           03:00:00         13-05-22<br></p>
+                        </div>
                         <div class="section" id="zoommap">
                         </div>
                     </div>
@@ -151,7 +165,7 @@
             
             <div class="flex-right">
                 <div class="section">
-                <p>LOG</p>
+                <p onclick="showLog()">LOG</p>
                 </div>
                     <!-- <input id="icon" width="20%" class="on-location-track" type="image" src="img/868.png"  onclick="playMusic()" style="visibility: hidden; z-index: 2"/>
                     <input id="icon" width="22%" class="nav-track" type="image" src="img/868.png"  onclick="playMusic1()" style="visibility: visible;"/>  -->
@@ -184,6 +198,7 @@
                     <script>
                         alert("⇶ turn phone horizonally ⇶  use mobile data ⇶ put on headphones ⇶  allow location access ⇶ don't attract attention ⇶ bon vovage ⇶ ");
                         zoommap = document.querySelector('#zoommap');
+                        log = document.querySelector('#log');
 
                         function openMap(){
                             
@@ -199,13 +214,32 @@
                                 zoommap.style.visibility = "hidden";
                             }                         
                         }
+
+                        function showLog(){                          
+                           log.style.visibility = "visible";
+                            
+                        }
+
+                        function showHelp(){                          
+                           log.style.visibility = "visible";
+                           $("#log").text("Locate the closest module by clicking on the landmarks on the map and moving accordingly.");
+                            
+                        }
+
+                        function showAbout(){  
+                            log.style.visibility = "visible";                        
+                            $("#log").text("868 MHz is a hybrid reality game.");
+                          
+                            
+                        }
+
                     </script>
                 </div>
                 <div class="section">
-                   <p>HELP</p>
+                   <p onclick="showHelp()">HELP</p>
                 </div>
                 <div class="section">
-                       <p>ABOUT</p>
+                       <p onclick="showAbout()">ABOUT</p>
                 </div>
             </div>
 

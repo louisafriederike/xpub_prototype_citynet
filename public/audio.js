@@ -1,4 +1,3 @@
-
 function playTrack1(){
     var Track1 = new Audio('audio/unlocked.mp3');
     Track1.play();
@@ -6,7 +5,6 @@ function playTrack1(){
 
 function playTrack2(){
     var music2 = new Audio('audio/breadcrumb.mp3');
-    $("#objective").text("From here I can see a gate, i follow it.");
     music2.play();
 }
 
