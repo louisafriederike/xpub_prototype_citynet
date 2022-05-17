@@ -2,11 +2,17 @@
 <html>
     <head>
         <title>868mhz.net</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet">
+        <script src="input.js"></script>
         <script src="p5.geolocation.js"></script>
+        <!-- <script src="p5.js"></script> -->
         <script src='socket.io/socket.io.js'></script>
+        <script src="audio.js"></script>
+
     </head>
     <body>
         <script>
@@ -37,96 +43,176 @@
                         document.getElementById('aq_value').textContent = 'NO READING';
                         }
 
-                const data = { lat, lon, weather, air };
-                const options = {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-                };
-                const db_response = await fetch('/api', options);
-                const db_json = await db_response.json();
-                console.log(db_json);
-            });
-            } else {
-            console.log('geolocation not available');
-            }
-            
+                        const data = { lat, lon, weather, air };
+                        const options = {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                        };
+                        const db_response = await fetch('/api', options);
+                        const db_json = await db_response.json();
+                        console.log(db_json);
+                    });
+                    } else {
+                    console.log('geolocation not available');
+                    }            
         </script>
 
-        
-        
-        <h1></h1>
-        <p></p>
-        <p></p>
-        <p id="gateway-distance">
-            Distance from Gateway 1:<br/>
-            [<span id="distance">0</span> km]
-            </p>
-        <div class="left">
-            <!-- <p>objective<br>
-                locate port to bridge communication with user ezn</p>
-                <p>enter 4 digit port number to receive data package</p>
-                <form id="form" action="">
-                    <input id="input" autocomplete="off"/><button>send</button>
-                </form> 
-                <script>
-    
-                    var socket = io();
-                    socket.on('data', function(data){
-    
-                        console.log(data);
-    
-                        document.getElementById('sample').style.opacity = data+"%"; 
-    
-                    });
-    
-            socket.on('node1', function(sensor){
-    
-            console.log(sensor);
-            });	
-    
-                    var form = document.getElementById('form');
-                    var input = document.getElementById('input');
-    
-                    form.addEventListener('submit', function(e) {
-                        e.preventDefault();
-                        if (input.value) {
-                        socket.emit('chat message', input.value);
-                        input.value = '';
-                        }
-                    }); 
-                </script> -->
-                        <div id="tripmeter">
-                            <p>Gateway 1:<br/>
-                                <span id="startLat">???</span>&deg; <br><span id="startLon">???</span>&deg;
-                            </p>
-                            <p>
-                                Current Location:<br/>
-                                <span id="currentLat">locating...</span>&deg; <br><span id="currentLon">locating...</span>&deg;
-                            </p>
-                            <p>
-                            Status:<br/>
-                            <span id="message">detecting....</span>
-                            </p>
-                            <img src="img/868.png" width="150vw" id="icon"></img>
+        <div class="flex-container">
+                    <div class="flex-left">
+                        <div class="section">
+                        
+                        <p>>>> PORT:</p>
+                        <span><form id="form" action="">
+                            <input id="input" autocomplete="off"/><button>>>></button>
+                        </form></span> 
+                        <script>
+                            var socket = io();
+                            socket.on('data', function(data){
+            
+                                console.log(data);
+            
+                                document.getElementById('sample').style.opacity = data+"%"; 
+            
+                            });
+            
+                            socket.on('node1', function(sensor){
+                    
+                            console.log(sensor);
+                            });	
+            
+                            var form = document.getElementById('form');
+                            var input = document.getElementById('input');
+            
+                            form.addEventListener('submit', function(e) {
+                                e.preventDefault();
+                                if (input.value) {
+                                socket.emit('chat message', input.value);
+                                input.value = '';
+                                }
+
+                                if (input.value = '59687'){
+                                    $("#objective").text("This dream was unlike any I can recall. It felt so real, yet so distorted and disorientating at the same time. I felt  the different textures of the ground pressing against the soles of my feet. An overwhelming feeling of presence rushing through my system. Present within my own body, I experience myself from a distance, hovering over me. This dream was different and it kept recurring more and more frequently. When I squint my eyes now, looking at the street lights, I can almost see it again. At first, I did not realise you were here, watching me. But of course, there was a reason this dream was unlike any other. ");
+                                    playTrack1();
+                                    localStorage.setItem('gateway','1');
+                                    console.log(localStorage.getItem('gateway'));
+                                    console.log("code is right");
+                                    input.value = '';
+
+                                }
+                                
+                                if (input.value = '00002'){
+                                    $("#objective").text("log 2");
+                                    playTrack1();
+                                    localStorage.setItem('gateway','2');
+                                    console.log(localStorage.getItem('gateway'));
+                                    console.log("code is right");
+                                    input.value = '';
+
+                                }
+                            }); 
+                        </script>
                         </div>
-        </div>
-            <div class="right">
+                        <div class="section" id="objective">
+                        <p>OBJECTIVE:<br>Enter S/ash Gallery to step into the game.</p>  
+                        </div>
+                       
+                        <div class="section">
+                            <p>DISTANCE: <span id="distance">0</span> km</p>
+                      
+                            <div id="tripmeter">
+                                <!-- <p>Gateway 1:<br/>
+                                    <span id="startLat">???</span>&deg; <br><span id="startLon">???</span>&deg;
+                                </p>
+                                <p>Gateway 2:<br/>
+                                    <span id="startLat2">???</span>&deg; <br><span id="startLon2">???</span>&deg;
+                                </p>
+                                <p>
+                                    Status:<br/>
+                                    <span id="message2">detecting....</span>
+                                    </p>
+                                <p>
+                                    Current Location:<br/>
+                                    <span id="currentLat">locating...</span>&deg; <br><span id="currentLon">locating...</span>&deg;
+                                </p> --> 
+                                    <p>
+                                    STATUS:
+                                    <span id="message">detecting....</span>
+                                    </p>                               
+                                </div>
+                        </div>
+                        <div class="section" id="zoommap">
+                        </div>
+                    </div>
+                       
 
+            
+            <div class="flex-right">
+                <div class="section">
+                <p>LOG</p>
+                </div>
+                    <!-- <input id="icon" width="20%" class="on-location-track" type="image" src="img/868.png"  onclick="playMusic()" style="visibility: hidden; z-index: 2"/>
+                    <input id="icon" width="22%" class="nav-track" type="image" src="img/868.png"  onclick="playMusic1()" style="visibility: visible;"/>  -->
+                <div class="section">
+                   <!-- <p onclick="openMap()"> MAP:</p>
+                   <p onclick="closeMap()"> minimize</p> -->
+                    <!-- <img id="map" src="img/abstract_map.png" alt="map" usemap="#workmap" width="70%">     
+                    <map name="workmap">
+                    <area shape="circle" coords="337, 300, 44" alt="Computer" onclick="playMusic()"  href="#">
+                    </map> -->
+                    
+                    <img src="img/map-markers.png" alt="map" usemap="#map">
+
+                    <map name="map">
+                      <area shape="circle" coords="45,45,15" alt="node01" onclick="breadCrumb1()" href="#">
+                      <area shape="circle" coords="20, 85,15" alt="node01" onclick="breadCrumb1()" href="#">
+                      <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb2()" href="#">
+                      <area shape="circle" coords="115,100,15" alt="node01" onclick="breadCrumb3()" href="#">
+                      <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb4()" href="#">
+                      <area shape="circle" coords="115,100,15" alt="node01" onclick="breadCrumb5()" href="#">
+                      <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb6()" href="#">
+                      <area shape="circle" coords="115,100,15" alt="node01" onclick="breadCrumb7()" href="#">
+                      <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb8()" href="#">
+                      <area shape="circle" coords="115,100,15" alt="node01" onclick="breadCrumb9()" href="#">
+                      <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb10()" href="#">
+                      <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb11()" href="#">
+                    </map> 
+                   
+
+                    <script>
+                        alert("⇶ turn phone horizonally ⇶  use mobile data ⇶ put on headphones ⇶  allow location access ⇶ don't attract attention ⇶ bon vovage ⇶ ");
+                        zoommap = document.querySelector('#zoommap');
+
+                        function openMap(){
+                            
+                            // $("#map").toggleClass("zoom");
+
+                            if (zoommap.style.visibility = "hidden"){
+                                zoommap.style.visibility = "visible";
+                            }
+                        }
+
+                        function closeMap(){                          
+                            if (zoommap.style.visibility = "visible"){
+                                zoommap.style.visibility = "hidden";
+                            }                         
+                        }
+                    </script>
+                </div>
+                <div class="section">
+                   <p>HELP</p>
+                </div>
+                <div class="section">
+                       <p>ABOUT</p>
+                </div>
             </div>
-<br><br>
 
-
-        <div class="main">
-        <p></p>
-
+        </div>  
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="fence.js"></script>
-    </div>
-   
-
-
+    
+ 
     </body>
 </html>
