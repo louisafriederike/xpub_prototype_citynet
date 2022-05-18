@@ -61,7 +61,7 @@ body {
  
 }
 
-#svg{
+#svg1{
    width: 50%;
 }
 
@@ -144,8 +144,9 @@ button{
 }
 
 #log{
-  visibility: hidden;
-  background-color: red;
+  /* visibility: hidden; */
+  background-color: #55554a;
+  color: black;
 }
 
 #back{

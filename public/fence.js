@@ -77,7 +77,7 @@ window.onload = function() {
          
           message.style.visibility = 'visible';
           nav.style.visibility = 'hidden';
-        }else if(distance > .01 && !localStorage.getItem('gateway') ){
+        }else if(distance > .01 && !localStorage.getItem('gateway')){
           $("#message").text("outside reach of gateway 1");
           $("#objective").text("Enter S/ash Gallery to step into the game.");
         }
