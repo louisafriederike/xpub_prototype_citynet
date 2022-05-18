@@ -53,10 +53,24 @@ body {
   padding-left: 10px;
   padding-top: 10px;
   background-color:black;
+  left: 10px;
+  border: 2px solid black;
+  border-radius:1px;
+  padding: 5px;
+  margin-bottom:6px;
  
 }
 
-#zoommap>img{
+#svg{
+   width: 50%;
+}
+
+.zoom>img{
+  height: calc(100vh - 60px);
+  width: auto;
+}
+
+#dreammap>img{
   height: calc(100vh - 60px);
   width: auto;
 }
@@ -71,7 +85,7 @@ body {
 }
 
 .flex-left {
-  width: 68%;
+  width: 40%;
   height: 100vh;
   /* border: 2px solid #c9cdc0; */
   border-radius: 2px;
@@ -84,7 +98,7 @@ body {
 }
 
 .flex-right {
-  width: 32%;
+  width: 60%;
   height: 100vh;
   /* border: 5px solid #c9cdc0; */
   border-radius: 2px;
@@ -131,9 +145,25 @@ button{
 
 #log{
   visibility: hidden;
+  background-color: red;
 }
 
 #back{
   visibility: hidden;
 }
 
+#log1{
+  visibility: hidden;
+}
+#log2{
+  visibility: hidden;
+}
+#log3{
+  visibility: hidden;
+}
+#log4{
+  visibility: hidden;
+}
+#log5{
+  visibility: hidden;
+}
