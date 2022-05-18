@@ -41,38 +41,20 @@ body {
   /* height: 60vh; */
 }
 
-.zoom{
-  position: fixed;
-  width: auto;
-  width: 68%;
-  height: 100vh;
-  /* border: 2px solid #c9cdc0; */
-  border-radius: 2px;
-  /* margin-right:3px; */
-  padding: 5px;
-  padding-left: 10px;
-  padding-top: 10px;
-  background-color:black;
-  left: 10px;
-  border: 2px solid black;
-  border-radius:1px;
-  padding: 5px;
-  margin-bottom:6px;
- 
-}
 
 #svg1{
-   width: 50%;
+   width: 100%;
+  padding-top: none;
 }
 
-.zoom>img{
+/* .zoom>img{
   height: calc(100vh - 60px);
   width: auto;
-}
+} */
 
-#dreammap>img{
-  height: calc(100vh - 60px);
-  width: auto;
+#dreammap{
+  height: 90vh;
+  
 }
    
 #gateway-distance{
@@ -85,7 +67,7 @@ body {
 }
 
 .flex-left {
-  width: 40%;
+  width: 55%;
   height: 100vh;
   /* border: 2px solid #c9cdc0; */
   border-radius: 2px;
@@ -98,7 +80,7 @@ body {
 }
 
 .flex-right {
-  width: 60%;
+  width: 45%;
   height: 100vh;
   /* border: 5px solid #c9cdc0; */
   border-radius: 2px;

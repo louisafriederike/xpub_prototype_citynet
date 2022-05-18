@@ -70,25 +70,26 @@ window.onload = function() {
         distance6 = calculateDistance(node6Lat, node6Long,position.coords.latitude, position.coords.longitude)
         $("#distance6").text(distance2);
         
-        if(distance < .01){
+        if(distance < .02){
           $("#message").text(" >>> you have entered gateway 1");
           $("#objective").text("turn the knob to 55 and wait for a moment. the creature will reveal a 5 digit code. enter it in the port above to unlcok the first dream log.");
           playTrack1();
          
           message.style.visibility = 'visible';
           nav.style.visibility = 'hidden';
-        }else if(distance > .01 && !localStorage.getItem('gateway')){
+
+        }else if(distance > .02 && !localStorage.getItem('gateway')){
           $("#message").text("outside reach of gateway 1");
           $("#objective").text("Enter S/ash Gallery to step into the game.");
         }
 
-        if(distance2 < .01){
+        if(distance2 < .02){
           playTrack1();
           $("#message2").text("You have entered Gateway 2.");
           $("#objective").text("You were everywhere and in everything, and every time, I instinctively new where to find you here. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. Space and time work differently in this world of yours. I have waited lifetimes for you, sitting right here on this bench. Lifetimes, turning into fractures of moments as I blink my eyes open. But I started to remember more and more. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. ");
           message.style.visibility = 'visible';
           nav.style.visibility = 'hidden';
-        }else if(distance2 > .01){
+        }else if(distance2 > .02){
           $("#message2").text("You are outside reach of Gateway 2.");
         }
 
