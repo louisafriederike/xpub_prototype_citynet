@@ -157,6 +157,9 @@
                                         <p>   log 5           03:00:00         13-05-22<br></p>
                                             <p>   log 6           03:00:00         13-05-22<br></p>
                         </div>
+                        <div class="section" id="back" onclick="backAgain()">
+                           back
+                            </div>
                         <div class="section" id="zoommap">
                         </div>
                     </div>
@@ -169,69 +172,76 @@
                 </div>
                     <!-- <input id="icon" width="20%" class="on-location-track" type="image" src="img/868.png"  onclick="playMusic()" style="visibility: hidden; z-index: 2"/>
                     <input id="icon" width="22%" class="nav-track" type="image" src="img/868.png"  onclick="playMusic1()" style="visibility: visible;"/>  -->
-                <div class="section">
-                   <!-- <p onclick="openMap()"> MAP:</p>
-                   <p onclick="closeMap()"> minimize</p> -->
+                <div class="section" id="dreammap">
+                   <p onclick="openMap()"> MAP:</p>
+                   <p onclick="closeMap()"> minimize</p>
                     <!-- <img id="map" src="img/abstract_map.png" alt="map" usemap="#workmap" width="70%">     
                     <map name="workmap">
                     <area shape="circle" coords="337, 300, 44" alt="Computer" onclick="playMusic()"  href="#">
                     </map> -->
                     
-                    <img src="img/map-markers.png" alt="map" usemap="#map">
+                    <img src="img/map-markers.png" alt="map" usemap="#map" >
 
                     <map name="map">
                       <area shape="circle" coords="45,45,15" alt="node01" onclick="breadCrumb1()" href="#">
                       <area shape="circle" coords="20, 85,15" alt="node01" onclick="breadCrumb1()" href="#">
                       <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb2()" href="#">
-                      <area shape="circle" coords="115,100,15" alt="node01" onclick="breadCrumb3()" href="#">
-                      <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb4()" href="#">
-                      <area shape="circle" coords="115,100,15" alt="node01" onclick="breadCrumb5()" href="#">
-                      <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb6()" href="#">
-                      <area shape="circle" coords="115,100,15" alt="node01" onclick="breadCrumb7()" href="#">
-                      <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb8()" href="#">
-                      <area shape="circle" coords="115,100,15" alt="node01" onclick="breadCrumb9()" href="#">
-                      <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb10()" href="#">
-                      <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb11()" href="#">
+                      <area shape="circle" coords="115,100,15" alt="node01" onclick="breadCrumb3()" href="#">     
+                      <area shape="circle" coords="20,130,15" alt="node01" onclick="breadCrumb4()" href="#">
+                      <area shape="circle" coords="65,190,15" alt="node01" onclick="breadCrumb5()" href="#">
+                      <area shape="circle" coords="120,160,15" alt="node01" onclick="breadCrumb6()" href="#">
+                      <area shape="circle" coords="145,185,15" alt="node01" onclick="breadCrumb7()" href="#">
+                      <area shape="circle" coords="210,115,15" alt="node01" onclick="breadCrumb8()" href="#">
+                      <area shape="circle" coords="125,125,15" alt="node01" onclick="breadCrumb9()" href="#">
+                      <area shape="circle" coords="120,40,15" alt="node01" onclick="breadCrumb10()" href="#">
+                      <area shape="circle" coords="180,30,15" alt="node01" onclick="breadCrumb11()" href="#">
                     </map> 
                    
 
                     <script>
-                        alert("⇶ turn phone horizonally ⇶  use mobile data ⇶ put on headphones ⇶  allow location access ⇶ don't attract attention ⇶ bon vovage ⇶ ");
+                        alert("⇶ turn phone horizonally ⇶  use mobile data ⇶ turn sound on ⇶  allow location access ⇶ don't attract attention ⇶ bon vovage ⇶ ");
                         zoommap = document.querySelector('#zoommap');
                         log = document.querySelector('#log');
+                        back = document.querySelector('#back');
 
                         function openMap(){
                             
-                            // $("#map").toggleClass("zoom");
+                            $("#dreammap").toggleClass("zoom");
 
-                            if (zoommap.style.visibility = "hidden"){
-                                zoommap.style.visibility = "visible";
-                            }
+                            // if (zoommap.style.visibility = "hidden"){
+                            //     zoommap.style.visibility = "visible";
+                            // }
                         }
 
                         function closeMap(){                          
-                            if (zoommap.style.visibility = "visible"){
-                                zoommap.style.visibility = "hidden";
-                            }                         
+                            // if (zoommap.style.visibility = "visible"){
+                            //     zoommap.style.visibility = "hidden";
+                            // }                         
                         }
 
                         function showLog(){                          
                            log.style.visibility = "visible";
-                                              $("#log").text("log 1   222  33");
+                           back.style.visibility = "visible";
+                           $("#log").text("log 1   222  33");
                          
                         }
 
                         function showHelp(){                          
                            log.style.visibility = "visible";
                            $("#log").text("Locate the closest module by clicking on the landmarks on the map and moving accordingly. When set to the correct frequency, the module will reveal the local port code after a few seconds. The shape of the map is abstract and should not be solely used for navigation.");
-                            
+                           back.style.visibility = "visible";
                         }
 
                         function showAbout(){  
                             log.style.visibility = "visible";                        
                             $("#log").text("868 MHz is a hybrid reality game running on the same standardized frequency as the LoRa gateways of The Things Network. Chase the electric currents of the asphalt to locate gateways and encounter a being which has nested itself beneath the city streets, all the way down the power lines woven amidst its whirring epicenter. Early release for Tec Art 2022, in progress master graduation work by Experimental Publishing student Louisa Teichmann. Module cases designed and 3D printed by Roos Groothuizen. Sound design by Kevin Stam. Logo design by Camilo García A. Realised in support by Planetart, TETEM, Joseph Knierzinger, Michael Murthaugh, Cristina Cochior and in inspiration and conversation with Mika Motskobili and with mental support by Micah Snijkers. Don't hate the game, hate the players. Just kidding, I hope you're finding your way ok.");
-                          
+                            back.style.visibility = "visible";
                             
+                        }
+
+                        function backAgain(){  
+                            log.style.visibility = "hidden";                        
+                            back.style.visibility = "hidden";
                         }
 
                     </script>
