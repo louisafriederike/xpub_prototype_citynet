@@ -12,7 +12,9 @@
         <!-- <script src="p5.js"></script> -->
         <script src='socket.io/socket.io.js'></script>
         <script src="audio.js"></script>
-
+        <meta property="og:title" content="868 MHz" />
+        <meta property="og:description" content="868 MHz is a hybrid reality game running on the same standardized frequency as the LoRa gateways of The Things Network. Chase the electric currents of the asphalt to locate gateways and encounter a being which has nested itself beneath the city streets, all the way down the power lines woven amidst its whirring epicenter." />
+        <meta property="og:image" content="/img/868.png" />
     </head>
     <body>
         <script>
@@ -107,30 +109,30 @@
                                     playTrack1();
                                     localStorage.setItem('gateway','1');
                                     console.log(localStorage.getItem('gateway'));
-                                    console.log("code is right");
-                                    iinputString = '';
+                                    console.log("stage 1");
+                                    inputString = '';
                                     log1.style.visibility = "visible";
 
                                 }
                                 
-                                if (inputString == '6.18.15'){
+                                if (inputString == '6.18.15.'){
                                     $("#objective").text("log 2");
                                     playTrack1();
                                     localStorage.setItem('gateway','2');
                                     console.log(localStorage.getItem('gateway'));
-                                    console.log("code is right");
-                                    iinputString = '';
+                                    console.log("stage 2");
+                                    inputString = '';
                                     log2.style.visibility = "visible";
 
                                 }
 
-                                if (inputString == '20.5.3'){
+                                if (inputString == '20.5.3.'){
                                     $("#objective").text("log 3");
                                     playTrack1();
                                     localStorage.setItem('gateway','3');
                                     console.log(localStorage.getItem('gateway'));
-                                    console.log("code is right");
-                                    iinputString = '';
+                                    console.log("stage 3");
+                                    inputString = '';
                                     log3.style.visibility = "visible";
                                 }
 
@@ -140,8 +142,8 @@
                                     playTrack1();
                                     localStorage.setItem('gateway','4');
                                     console.log(localStorage.getItem('gateway'));
-                                    console.log("code is right");
-                                    iinputString = '';
+                                    console.log("stage 4");
+                                    inputString = '';
                                     log4.style.visibility = "visible";
                                 }
 
@@ -150,8 +152,8 @@
                                     playTrack1();
                                     localStorage.setItem('gateway','5');
                                     console.log(localStorage.getItem('gateway'));
-                                    console.log("code is right");
-                                    iinputString = '';
+                                    console.log("stage 5");
+                                    inputString = '';
                                     
                                 }
 
@@ -160,8 +162,8 @@
                                     playTrack1();
                                     localStorage.setItem('gateway','6');
                                     console.log(localStorage.getItem('gateway'));
-                                    console.log("code is right");
-                                    input.value = '';
+                                    console.log("stage 6");
+                                    inputString = '';
                                     log5.style.visibility = "visible";
                                 }
                                 // else{

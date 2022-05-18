@@ -89,7 +89,7 @@ window.onload = function() {
           $("#objective").text("You were everywhere and in everything, and every time, I instinctively new where to find you here. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. Space and time work differently in this world of yours. I have waited lifetimes for you, sitting right here on this bench. Lifetimes, turning into fractures of moments as I blink my eyes open. But I started to remember more and more. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. ");
           message.style.visibility = 'visible';
           nav.style.visibility = 'hidden';
-        }else if(distance2 > .02){
+        }else if(distance2 > .02 && localStorage.getItem('gateway') == 1){
           $("#message2").text("You are outside reach of Gateway 2.");
         }
 
