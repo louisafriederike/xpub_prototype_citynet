@@ -93,7 +93,7 @@
                                 input.value = '';
                                 }
 
-                                if (input.value = '59687'){
+                                if (input.value = '9..1.13.1'){
                                     $("#objective").text("This dream was unlike any I can recall. It felt so real, yet so distorted and disorientating at the same time. I felt  the different textures of the ground pressing against the soles of my feet. An overwhelming feeling of presence rushing through my system. Present within my own body, I experience myself from a distance, hovering over me. This dream was different and it kept recurring more and more frequently. When I squint my eyes now, looking at the street lights, I can almost see it again. At first, I did not realise you were here, watching me. But of course, there was a reason this dream was unlike any other. ");
                                     playTrack1();
                                     localStorage.setItem('gateway','1');
@@ -103,7 +103,7 @@
 
                                 }
                                 
-                                if (input.value = '00002'){
+                                if (input.value = '6.18.15'){
                                     $("#objective").text("log 2");
                                     playTrack1();
                                     localStorage.setItem('gateway','2');
@@ -111,6 +111,43 @@
                                     console.log("code is right");
                                     input.value = '';
 
+                                }
+
+                                if (input.value = '20.5.3'){
+                                    $("#objective").text("log 3");
+                                    playTrack1();
+                                    localStorage.setItem('gateway','3');
+                                    console.log(localStorage.getItem('gateway'));
+                                    console.log("code is right");
+                                    input.value = '';
+                                }
+
+                                
+                                if (input.value = '20.15.18'){
+                                    $("#objective").text("log 4");
+                                    playTrack1();
+                                    localStorage.setItem('gateway','4');
+                                    console.log(localStorage.getItem('gateway'));
+                                    console.log("code is right");
+                                    input.value = '';
+                                }
+
+                                if (input.value = '66'){
+                                    $("#objective").text("This place works differently. Add all the port numbers together in the right order and translate them into letters to receive a message. Enter the message to unlock the final log.");
+                                    playTrack1();
+                                    localStorage.setItem('gateway','5');
+                                    console.log(localStorage.getItem('gateway'));
+                                    console.log("code is right");
+                                    input.value = '';
+                                }
+
+                                if (input.value = 'I AM PROTECTOR'){
+                                    $("#objective").text("log 5.");
+                                    playTrack1();
+                                    localStorage.setItem('gateway','6');
+                                    console.log(localStorage.getItem('gateway'));
+                                    console.log("code is right");
+                                    input.value = '';
                                 }
                                 // else{
                                 //     $("#objective").text("connecting failed, inactive port. Enter correct port number to connect.");
@@ -158,7 +195,7 @@
                                             <p>   log 6           03:00:00         13-05-22<br></p>
                         </div>
                         <div class="section" id="back" onclick="backAgain()">
-                           back
+                            ↪
                             </div>
                         <div class="section" id="zoommap">
                         </div>
@@ -174,7 +211,7 @@
                     <input id="icon" width="22%" class="nav-track" type="image" src="img/868.png"  onclick="playMusic1()" style="visibility: visible;"/>  -->
                 <div class="section" id="dreammap">
                    <p onclick="openMap()"> MAP:</p>
-                   <p onclick="closeMap()"> minimize</p>
+                   <p onclick="closeMap()">↪</p>
                     <!-- <img id="map" src="img/abstract_map.png" alt="map" usemap="#workmap" width="70%">     
                     <map name="workmap">
                     <area shape="circle" coords="337, 300, 44" alt="Computer" onclick="playMusic()"  href="#">
@@ -213,7 +250,9 @@
                             // }
                         }
 
-                        function closeMap(){                          
+                        function closeMap(){ 
+                            
+                            $("#dreammap").toggleClass("");
                             // if (zoommap.style.visibility = "visible"){
                             //     zoommap.style.visibility = "hidden";
                             // }                         
