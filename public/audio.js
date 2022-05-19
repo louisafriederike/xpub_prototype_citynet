@@ -73,3 +73,33 @@ function breadCrumb11(){
     $("#objective").text("I can see large metal structures by the water.");
     music2.play();
 }
+
+function objective1(){
+    var music2 = new Audio('audio/breadcrumb.mp3');
+    $("#objective").text("Welcome to the Gallery. Take your time, look around. When you are ready, notice the little transparent module mounted on the wall in the corner. Turn the knob to 55 and keep it steady there for a moment until a number code is revealed. Enter it in the port above, with attention to the dots, to unlock the first dream log.");
+    music2.play();
+}
+
+function objective2(){
+    var music2 = new Audio('audio/breadcrumb.mp3');
+    $("#objective").text("You have entered the second gateway. The code is hidden on a metal door locking in high voltage. You will see three digits, loose the first to get the code.");
+    music2.play();
+}
+
+function objective3(){
+    var music2 = new Audio('audio/breadcrumb.mp3');
+    $("#objective").text(" Welcome to Gateway 3. The module is located on yellow. Hidden on a number wheel in a window close by, you will find the code spelled out in large letters. Loose the first digit.");
+    music2.play();
+}
+
+function objective4(){
+    var music2 = new Audio('audio/breadcrumb.mp3');
+    $("#objective").text("The code is hidden on a tag on a small metal staircase: OCTOZILLA, followed by four digits. Loose the first two. The module is not far.");
+    music2.play();
+}
+
+function objective5(){
+    var music2 = new Audio('audio/breadcrumb.mp3');
+    $("#objective").text("The code is hidden on a sign next to a yellow bench. Port of Rotterdam. Loose the first digit. The module is hidden out of sight, facing the house boat.");
+    music2.play();
+}

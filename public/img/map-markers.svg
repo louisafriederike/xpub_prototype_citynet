@@ -25,7 +25,7 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
      inkscape:zoom="1.4936741"
-     inkscape:cx="273.15195"
+     inkscape:cx="195.82585"
      inkscape:cy="292.90191"
      inkscape:window-width="1920"
      inkscape:window-height="991"
@@ -65,7 +65,8 @@
      width="31.4"
      height="31.4"
      transform="rotate(-1)"
-     id="rect13" />
+     id="rect13"
+     onclick="objective1()" />
   <rect
      class="f"
      x="489.34665"
@@ -73,7 +74,8 @@
      width="31.4"
      height="31.4"
      transform="rotate(-1)"
-     id="rect15" />
+     id="rect15"
+     onclick="objective5()" />
   <rect
      class="f"
      x="226.79611"
@@ -81,7 +83,8 @@
      width="31.4"
      height="31.4"
      transform="rotate(-1)"
-     id="rect17" />
+     id="rect17"
+     onclick="objective4()" />
   <rect
      class="f"
      x="442.65909"
@@ -89,7 +92,8 @@
      width="31.4"
      height="31.4"
      transform="rotate(-1)"
-     id="rect19" />
+     id="rect19"
+     onclick="objective3()" />
   <rect
      class="f"
      x="47.489868"
@@ -97,7 +101,8 @@
      width="31.4"
      height="31.4"
      transform="rotate(-1)"
-     id="rect21" />
+     id="rect21"
+     onclick="objective2()" />
   <rect
      class="h"
      x="48.432594"

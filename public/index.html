@@ -97,6 +97,9 @@
                                 log3 = document.querySelector('#log3');
                                 log4 = document.querySelector('#log4');
                                 log5 = document.querySelector('#log5');
+                                dreamlog = document.querySelector('#dreamlog');
+                                back2 = document.querySelector('#back2');
+
                                 e.preventDefault();
                                 if (input.value) {
                                     socket.emit('chat message', input.value);
@@ -105,18 +108,23 @@
                                 }
 
                                 if (inputString.includes('9..1.13.1')){
-                                    $("#objective").text("Encased in its concrete and metal armour, lie the keys to the pulsating veins of a mirror world. Whatever makes it inside its bloodstream, will travel fast and eternally through the nexus of time and space it occupies in that instant. I wake up kicking and screaming, like a new born child overstimulated by the harsh white lights of its new artificial surrounding. I was born dead I thought. Every time I looked down at my arms and hands, I saw those of a stranger, limp and disconnected body parts hanging from my torso. But in this mirror world, I am floating, intuitively, never doubting that the path in front was intended for me. Two interlaced grids sharing the same spatial markers. This dream is unlike any I can recall. At first, I did not realise you were here, watching me. But of course, there was a reason this dream was unlike any other.");
+
+                                    dreamlog.style.display = "flex";
+                                    back2.style.display = "flex";
+                                    $("#dreamlog").text("Encased in its concrete and metal armour, lie the keys to the pulsating veins of a mirror world. Whatever makes it inside its bloodstream, will travel fast and eternally through the nexus of time and space it occupies in that instant. I wake up kicking and screaming, like a new born child overstimulated by the harsh white lights of its new artificial surrounding. I was born dead I thought. Every time I looked down at my arms and hands, I saw those of a stranger, limp and disconnected body parts hanging from my torso. But in this mirror world, I am floating, intuitively, never doubting that the path in front was intended for me. Two interlaced grids sharing the same spatial markers. This dream is unlike any I can recall. At first, I did not realise you were here, watching me. But of course, there was a reason this dream was unlike any other."); 
                                     playTrack1();
                                     localStorage.setItem('gateway','1');
                                     console.log(localStorage.getItem('gateway'));
                                     console.log("stage 1");
                                     inputString = '';
                                     log1.style.visibility = "visible";
-
                                 }
                                 
-                                if (inputString == '6.18.15.'){
-                                    $("#objective").text("Drivers and runners chased me out of the main street, away from the high frequencies, grounded by asphalt, I sat down. For hours, or maybe years. I watched the daylight chance from electric blue to grey and back again. Time works differently in this world. Every moment is a lifetime, and every lifetime is a moment. Lifetimes, turning into fractures of moments as I blink my eyes open. Memory represents space in this world, and the processor is time. A simple organizing principle. I walk through this world, uncovering layers of information in bits. My memory builds places on top of coordinates, stacking information and emotion onto the spatial grid. My subconscious will spend night after night constructing dungeons and palaces from badly processed memories, for me to revisit endlessly. So here I am again. I am in the same space in a new timeline.");
+                                if (inputString.includes('.18.15.6')){
+                                    
+                                    dreamlog.style.display = "flex";
+                                    back2.style.display = "flex";
+                                    $("#dreamlog").text("Drivers and runners chased me out of the main street, away from the high frequencies, grounded by asphalt, I sat down. For hours, or maybe years. I watched the daylight chance from electric blue to grey and back again. Time works differently in this world. Every moment is a lifetime, and every lifetime is a moment. Lifetimes, turning into fractures of moments as I blink my eyes open. Memory represents space in this world, and the processor is time. A simple organizing principle. I walk through this world, uncovering layers of information in bits. My memory builds places on top of coordinates, stacking information and emotion onto the spatial grid. My subconscious will spend night after night constructing dungeons and palaces from badly processed memories, for me to revisit endlessly. So here I am again. I am in the same space in a new timeline.");
                                     playTrack1();
                                     localStorage.setItem('gateway','2');
                                     console.log(localStorage.getItem('gateway'));
@@ -126,8 +134,11 @@
 
                                 }
 
-                                if (inputString == '20.5.3.'){
-                                    $("#objective").text("I do not recall ever meeting someone here. All these times I have sat down here, I had no idea you were so close. Then one time, I look up, and see you towering over me, with your massive metal arms, flashing and blinking. How could I miss you? Every time I returned, you grew taller and taller. Then one time you came down to sit with me. We talked for centuries, right here, me becoming you and you becoming me. And then, all of the sudden, my heartbeat synced with the static on your hands. We synced. In dreams, things can be distorted, strange. Walls can move and creatures change shape. But I knew exactly where I was, every time. And I knew instinctively where to find you.  When I squint my eyes now, looking at the street lights, I can almost see it again.");
+                                if (inputString.includes('20.5.3.')){
+
+                                    dreamlog.style.display = "flex";
+                                    back2.style.display = "flex";
+                                    $("#dreamlog").text("I do not recall ever meeting someone here. All these times I have sat down here, I had no idea you were so close. Then one time, I look up, and see you towering over me, with your massive metal arms, flashing and blinking. How could I miss you? Every time I returned, you grew taller and taller. Then one time you came down to sit with me. We talked for centuries, right here, me becoming you and you becoming me. And then, all of the sudden, my heartbeat synced with the static on your hands. We synced. In dreams, things can be distorted, strange. Walls can move and creatures change shape. But I knew exactly where I was, every time. And I knew instinctively where to find you.  When I squint my eyes now, looking at the street lights, I can almost see it again.");
                                     playTrack1();
                                     localStorage.setItem('gateway','3');
                                     console.log(localStorage.getItem('gateway'));
@@ -137,8 +148,10 @@
                                 }
 
                                 
-                                if (inputString == '20.15.18'){
-                                    $("#objective").text("The path to you is obscured now. You are out of reach for me, but you have grown so tall, you can see my every move. Your nervous system extends to every crack of the city. You sense the weight of every step I set down as I felt the weight of your gaze on my back. And now, since we synced, I am transparent to you. You can predict my next move. It used to be a game for us, but now all I want is to escape you. I tried to run circles to shake you off, mix with big crowds to wash out my signals. Up and down stairs and inside parking garages and court yards.");
+                                if (inputString.includes('20.15.18')){
+                                    dreamlog.style.display = "flex";
+                                    back2.style.display = "flex";
+                                    $("#dreamlog").text("The path to you is obscured now. You are out of reach for me, but you have grown so tall, you can see my every move. Your nervous system extends to every crack of the city. You sense the weight of every step I set down as I felt the weight of your gaze on my back. And now, since we synced, I am transparent to you. You can predict my next move. It used to be a game for us, but now all I want is to escape you. I tried to run circles to shake you off, mix with big crowds to wash out my signals. Up and down stairs and inside parking garages and court yards.");
                                     playTrack1();
                                     localStorage.setItem('gateway','4');
                                     console.log(localStorage.getItem('gateway'));
@@ -147,8 +160,10 @@
                                     log4.style.visibility = "visible";
                                 }
 
-                                if (inputString == '66'){
-                                    $("#objective").text("This place works differently. Add all the port numbers together in the right order and translate them into letters to receive a message. Enter the message to unlock the final log.");
+                                if (inputString.includes('66')){
+                                    dreamlog.style.display = "flex";
+                                    back2.style.display = "flex";
+                                    $("#dreamlog").text("This place works differently. Add all the port numbers together in the right order and translate them into letters to receive a message. Enter the message to unlock the final log.");
                                     playTrack1();
                                     localStorage.setItem('gateway','5');
                                     console.log(localStorage.getItem('gateway'));
@@ -157,8 +172,10 @@
                                     
                                 }
 
-                                if (inputString == 'I AM PROTECTOR'){
-                                    $("#objective").text("You were everywhere and in everything. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. But I started to remember more and more from this world as I awoke in the other, until they became indistinguishable. You spilled into every moment of my waking hours, every cell of my body and every floor of my memory palace, overwriting my spaces. Memory is space in this world, and my brain has data rot. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. But you are the puzzle that was not meant to be solved.");
+                                if (inputString.includes('I AM PROTECTOR')){
+                                    dreamlog.style.display = "flex";
+                                    back2.style.display = "flex";
+                                    $("#dreamlog").text("You were everywhere and in everything. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. But I started to remember more and more from this world as I awoke in the other, until they became indistinguishable. You spilled into every moment of my waking hours, every cell of my body and every floor of my memory palace, overwriting my spaces. Memory is space in this world, and my brain has data rot. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. But you are the puzzle that was not meant to be solved.");
                                     playTrack1();
                                     localStorage.setItem('gateway','6');
                                     console.log(localStorage.getItem('gateway'));
@@ -173,8 +190,14 @@
                             }); 
                         </script>
                         </div>
+                        <div class="section" id="dreamlog">
+                            <p></p>  
+                            </div>
+                            <div class="section" id="back2" onclick="backAgain2()">
+                                ↪
+                        </div>
                         <div class="section" id="objective">
-                        <p>OBJECTIVE:<br>Enter S/ash Gallery to step into the game.</p>  
+                        <p>OBJECTIVE:<br>Enter S/ash Gallery to step into the game and unlock gateway 1. Tap the different markers on the map in order to navigate and receive objectives. When set to the right digit, the modules in the locations will reveal a port number. Enter it above to collect dream logs. Follow the blue markers on the pavement to make your way through the landmarks.</p>  
                         </div>
                        
                         <div class="section">
@@ -204,12 +227,17 @@
 
                         <div class="section" id="log">
                         <p id="info"></p>
-                         <p id="log1" onclick="log1Open()">Log 1     PORT: 9..1.13.1     03:02:00         02-04-22<br></p>
-                            <p id="log2" onclick="log2Open()">Log 2     PORT: 6.18.15     02:42:00         13-04-22<br></p>
-                                <p id="log3" onclick="log3Open()">Log 3     PORT: 20.5.3.     03:36:00         25-04-22<br></p>
-                                    <p id="log4" onclick="log4Open()">Log 4     PORT: 20.15.18     03:86:00         07-05-22<br></p>
-                                        <p id="log5" onclick="log5Open()">Log 5     PORT: 0000000     06:86:00         17-05-22<br></p>   
-                                        </div>                                      
+
+                                        </div>   
+                                        
+                                        <div class="section" id="fulllog">
+                                           
+                                             <p id="log1" onclick="log1Open()">Log 1     PORT: 9..1.13.1     03:02:00         02-04-22<br></p>
+                                                <p id="log2" onclick="log2Open()">Log 2     PORT: 6.18.15     02:42:00         13-04-22<br></p>
+                                                    <p id="log3" onclick="log3Open()">Log 3     PORT: 20.5.3.     03:36:00         25-04-22<br></p>
+                                                        <p id="log4" onclick="log4Open()">Log 4     PORT: 20.15.18     03:86:00         07-05-22<br></p>
+                                                            <p id="log5" onclick="log5Open()">Log 5     PORT: 868     06:86:00         17-05-22<br></p>   
+                                                            </div> 
                                         
                         <div class="section" id="back" onclick="backAgain()">
                             ↪
@@ -264,7 +292,7 @@
                              inkscape:deskcolor="#d1d1d1"
                              showgrid="true"
                              inkscape:zoom="1.4936741"
-                             inkscape:cx="273.15195"
+                             inkscape:cx="195.82585"
                              inkscape:cy="292.90191"
                              inkscape:window-width="1920"
                              inkscape:window-height="991"
@@ -304,7 +332,8 @@
                              width="31.4"
                              height="31.4"
                              transform="rotate(-1)"
-                             id="rect13" />
+                             id="rect13"
+                             onclick="objective1()" />
                           <rect
                              class="f"
                              x="489.34665"
@@ -312,7 +341,8 @@
                              width="31.4"
                              height="31.4"
                              transform="rotate(-1)"
-                             id="rect15" />
+                             id="rect15"
+                             onclick="objective5()" />
                           <rect
                              class="f"
                              x="226.79611"
@@ -320,7 +350,8 @@
                              width="31.4"
                              height="31.4"
                              transform="rotate(-1)"
-                             id="rect17" />
+                             id="rect17"
+                             onclick="objective4()" />
                           <rect
                              class="f"
                              x="442.65909"
@@ -328,7 +359,8 @@
                              width="31.4"
                              height="31.4"
                              transform="rotate(-1)"
-                             id="rect19" />
+                             id="rect19"
+                             onclick="objective3()" />
                           <rect
                              class="f"
                              x="47.489868"
@@ -336,7 +368,8 @@
                              width="31.4"
                              height="31.4"
                              transform="rotate(-1)"
-                             id="rect21" />
+                             id="rect21"
+                             onclick="objective2()" />
                           <rect
                              class="h"
                              x="48.432594"
@@ -447,7 +480,8 @@
                              transform="rotate(-1)"
                              id="rect51"
                              onclick="breadCrumb10()" />
-                        </svg>                        
+                        </svg>
+                        
                         
 
                     <!-- <map name="map">
@@ -472,6 +506,9 @@
                         log = document.querySelector('#log');
                         info = document.querySelector('#info');
                         back = document.querySelector('#back');
+                        back2 = document.querySelector('#back2');
+                        dreamlog = document.querySelector('#dreamlog');
+
 
                         // function openMap(){
 
@@ -517,24 +554,41 @@
                             back.style.visibility = "hidden";
                         }
 
-                        function log1Open(){  
-                            $("#objective").text("Encased in its concrete and metal armour, lie the keys to the pulsating veins of a mirror world. Whatever makes it inside its bloodstream, will travel fast and eternally through the nexus of time and space it occupies in that instant. I wake up kicking and screaming, like a new born child overstimulated by the harsh white lights of its new artificial surrounding. I was born dead I thought. Every time I looked down at my arms and hands, I saw those of a stranger, limp and disconnected body parts hanging from my torso. But in this mirror world, I am floating, intuitively, never doubting that the path in front was intended for me. This dream is unlike any I can recall. At first, I did not realise you were here, watching me. But of course, there was a reason this dream was unlike any other.");
+                        function backAgain2(){  
+                            dreamlog.style.display = "none";                       
+                            back2.style.display = "none";
                         }
 
+                        function log1Open(){  
+                            
+                            dreamlog.style.display = "flex";
+                            back2.style.display = "flex";
+                            $("#dreamlog").text("Encased in its concrete and metal armour, lie the keys to the pulsating veins of a mirror world. Whatever makes it inside its bloodstream, will travel fast and eternally through the nexus of time and space it occupies in that instant. I wake up kicking and screaming, like a new born child overstimulated by the harsh white lights of its new artificial surrounding. I was born dead I thought. Every time I looked down at my arms and hands, I saw those of a stranger, limp and disconnected body parts hanging from my torso. But in this mirror world, I am floating, intuitively, never doubting that the path in front was intended for me. Two interlaced grids sharing the same spatial markers. This dream is unlike any I can recall. At first, I did not realise you were here, watching me. But of course, there was a reason this dream was unlike any other."); 
+                   
+                     }
+
                         function log2Open(){  
-                            $("#objective").text("Drivers and runners chased me out of the main street, away from the high frequencies, grounded by asphalt, I sat down. For hours, or maybe years. I watched the daylight chance from electric blue to grey and back again. Time works differently in this world. Every moment is a lifetime, and every lifetime is a moment. And as soon as I wake up, it all feels insignificant. Memory represents space in this world, and the processor is time. A simple organizing principle. I walk through this world, uncovering layers of information in bits. My memory builds places on top of coordinates, stacking information and emotion onto the spatial grid. My subconscious will spend night after night constructing dungeons and palaces from badly processed memories, for me to revisit endlessly. So here I am again. I am in the same space in a new timeline.");
+                            dreamlog.style.display = "flex";
+                            back2.style.display = "flex";
+                            $("#dreamlog").text("Drivers and runners chased me out of the main street, away from the high frequencies, grounded by asphalt, I sat down. For hours, or maybe years. I watched the daylight chance from electric blue to grey and back again. Time works differently in this world. Every moment is a lifetime, and every lifetime is a moment. And as soon as I wake up, it all feels insignificant. Memory represents space in this world, and the processor is time. A simple organizing principle. I walk through this world, uncovering layers of information in bits. My memory builds places on top of coordinates, stacking information and emotion onto the spatial grid. My subconscious will spend night after night constructing dungeons and palaces from badly processed memories, for me to revisit endlessly. So here I am again. I am in the same space in a new timeline.");
                         }
 
                         function log3Open(){  
-                            $("#objective").text("I do not recall ever meeting someone here. All these times I have sat down here, I had no idea you were so close. Then one time, I look up, and see you towering over me, with your massive metal arms, flashing and blinking. How could I miss you? Every time I returned, you grew taller and taller. Then one time you came down to sit with me. We talked for centuries, right here, me becoming you and you becoming me. And then, all of the sudden, my heartbeat synced with the static on your hands. We synced. In dreams, things can be distorted, strange. Walls can move and creatures change shape. But I knew exactly where I was, every time. And I knew instinctively where to find you.  When I squint my eyes now, looking at the street lights, I can almost see it again.");
+                            dreamlog.style.display = "flex";
+                            back2.style.display = "flex";
+                            $("#dreamlog").text("I do not recall ever meeting someone here. All these times I have sat down here, I had no idea you were so close. Then one time, I look up, and see you towering over me, with your massive metal arms, flashing and blinking. How could I miss you? Every time I returned, you grew taller and taller. Then one time you came down to sit with me. We talked for centuries, right here, me becoming you and you becoming me. And then, all of the sudden, my heartbeat synced with the static on your hands. We synced. In dreams, things can be distorted, strange. Walls can move and creatures change shape. But I knew exactly where I was, every time. And I knew instinctively where to find you.  When I squint my eyes now, looking at the street lights, I can almost see it again.");
                         }
 
-                        function log4Open(){  
-                            $("#objective").text("The path to you is obscured now. You are out of reach for me, but you have grown so tall, you can see my every move. Your nervous system extends to every crack of the city. You sense the weight of every step I set down as I felt the weight of your gaze on my back. And now, since we synced, I am transparent to you. You can predict my next move. It used to be a game for us, but now all I want is to escape you. I tried to run circles to shake you off, mix with big crowds to wash out my signals. Up and down stairs and inside parking garages and court yards.");
+                        function log4Open(){ 
+                            dreamlog.style.display = "flex";
+                            back2.style.display = "flex"; 
+                            $("#dreamlog").text("The path to you is obscured now. You are out of reach for me, but you have grown so tall, you can see my every move. Your nervous system extends to every crack of the city. You sense the weight of every step I set down as I felt the weight of your gaze on my back. And now, since we synced, I am transparent to you. You can predict my next move. It used to be a game for us, but now all I want is to escape you. I tried to run circles to shake you off, mix with big crowds to wash out my signals. Up and down stairs and inside parking garages and court yards.");
                         }
 
-                        function log5Open(){  
-                            $("#objective").text("You were everywhere and in everything. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. But I started to remember more and more from this world as I awoke in the other, until they became indistinguishable. You spilled into every moment of my waking hours, every cell of my body and every floor of my memory palace, overwriting my spaces. Memory is space in this world, and my brain has data rot. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. But you are the puzzle that was not meant to be solved.");
+                        function log5Open(){ 
+                            dreamlog.style.display = "flex";
+                            back2.style.display = "flex"; 
+                            $("#dreamlog").text("You were everywhere and in everything. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. But I started to remember more and more from this world as I awoke in the other, until they became indistinguishable. You spilled into every moment of my waking hours, every cell of my body and every floor of my memory palace, overwriting my spaces. Memory is space in this world, and my brain has data rot. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. But you are the puzzle that was not meant to be solved.");
                         }
 
 

@@ -50,12 +50,6 @@ window.onload = function() {
       navigator.geolocation.watchPosition(function(position) {
         $("#currentLat").text(position.coords.latitude);
         $("#currentLon").text(position.coords.longitude);
-      
-      
-        if(localStorage.getItem('gateway') == '1'){
-          distance2 = calculateDistance(node2Lat, node2Long,position.coords.latitude, position.coords.longitude)
-          $("#distance").text(distance2);
-      }
         distance = calculateDistance(node1Lat, node1Long,position.coords.latitude, position.coords.longitude)
         $("#distance").text(distance);
         distance2 = calculateDistance(node2Lat, node2Long,position.coords.latitude, position.coords.longitude)
@@ -66,56 +60,84 @@ window.onload = function() {
         $("#distance4").text(distance2);
         distance5 = calculateDistance(node5Lat, node5Long,position.coords.latitude, position.coords.longitude)
         $("#distance5").text(distance);
+
+        if(!localStorage.getItem('gateway')){
+          
+          $("#distance").text(distance);
+      }
+        if(localStorage.getItem('gateway') == '1'){
+          $("#distance").text(distance2);
+      }
+
+      if(localStorage.getItem('gateway') == '2'){
+       
+        $("#distance").text(distance3);
+    }
+
+    if(localStorage.getItem('gateway') == '3'){
+       
+      $("#distance").text(distance4);
+  }
+
+  if(localStorage.getItem('gateway') == '4'){
+       
+    $("#distance").text(distance5);
+}
+
+if(localStorage.getItem('gateway') == '5'){
+       
+  $("#distance").text("Our journey ends here.");
+}
+
         
-        if(distance < .02  && !localStorage.getItem('gateway')){
-          $("#message").text(" >>> you have entered gateway 1");
-          $("#objective").text("Welcome to the Gallery. Take your time, look around. When you are ready, notice the little transparent module mounted on the wall in the corner. Turn the knob to 55 and keep it steady there for a moment until a number code is revealed. Enter it in the port above, with attention to the dots, to unlock the first dream log.");
-          playTrack1();        
-          message.style.visibility = 'visible';
-          nav.style.visibility = 'hidden';
-        }else if(distance > .02 && !localStorage.getItem('gateway')){
-          $("#message").text("outside reach of gateway 1");
-          $("#objective").text("Enter S/ash Gallery to step into the game.");
+       if(distance < .02){
+       $("#message").text(" >>> you have entered gateway 1");
+        //   $("#objective").text("Welcome to the Gallery. Take your time, look around. When you are ready, notice the little transparent module mounted on the wall in the corner. Turn the knob to 55 and keep it steady there for a moment until a number code is revealed. Enter it in the port above, with attention to the dots, to unlock the first dream log.");
+       playTrack1();        
+        //   message.style.visibility = 'visible';
+        //   nav.style.visibility = 'hidden';
+        // }else if(distance > .02 && !localStorage.getItem('gateway')){
+        //   $("#message").text("outside reach of gateway 1");
+        //   $("#objective").text("Enter S/ash Gallery to step into the game.");
         }
 
-        if(distance2 < .02 && localStorage.getItem('gateway')){
+       if(distance2 < .02){
           playTrack1();
           $("#message").text(">>> you have entered gateway 2.");
-          $("#objective").text("You have entered the second gateway. the code is hidden on a metal door locking in high voltage. You will see three digits, loose the first to get the code.");
-          message.style.visibility = 'visible';
-          nav.style.visibility = 'hidden';
-        }else if(distance2 > .02 && localStorage.getItem('gateway') == 1){
-          $("#message2").text("You are outside reach of Gateway 2.");
+        //   $("#objective").text("You have entered the second gateway. the code is hidden on a metal door locking in high voltage. You will see three digits, loose the first to get the code.");
+        //   message.style.visibility = 'visible';
+        //   nav.style.visibility = 'hidden';
+        // }else if(distance2 > .02 && localStorage.getItem('gateway') == 1){
+        //   $("#message2").text("You are outside reach of Gateway 2.");
         }
-
-        if(distance3 < .02 && localStorage.getItem('gateway') == 2){
+       if(distance3 < .02){
           playTrack1();
           $("#message").text(">>> you have entered gateway 3.");
-          $("#objective").text("The code is hidden on a number wheel in a window close by, spelled out in large letters. Loose the first digit.");
-          message.style.visibility = 'visible';
-          nav.style.visibility = 'hidden';
-        }else if(distance3 > .02 && localStorage.getItem('gateway') == 2){
-          $("#message").text("You are outside reach of Gateway 3.");
+        //   $("#objective").text("The code is hidden on a number wheel in a window close by, spelled out in large letters. Loose the first digit.");
+        //   message.style.visibility = 'visible';
+        //   nav.style.visibility = 'hidden';
+        // }else if(distance3 > .02 && localStorage.getItem('gateway') == 2){
+        //   $("#message").text("You are outside reach of Gateway 3.");
         }
 
-        if(distance4 < .02 && localStorage.getItem('gateway') == 3){
+        if(distance4 < .02){
           playTrack1();
           $("#message").text(">>> you have entered gateway 4.");
-          $("#objective").text("The code is hidden on a tag on a small metal straigcase: OCTOZILLA, followed bu four digits. Loose the first two.");
-          message.style.visibility = 'visible';
-          nav.style.visibility = 'hidden';
-        }else if(distance4 > .02 && localStorage.getItem('gateway') == 3){
-          $("#message").text("You are outside reach of Gateway 4.");
+        //   $("#objective").text("The code is hidden on a tag on a small metal straigcase: OCTOZILLA, followed bu four digits. Loose the first two.");
+        //   message.style.visibility = 'visible';
+        //   nav.style.visibility = 'hidden';
+        // }else if(distance4 > .02 && localStorage.getItem('gateway') == 3){
+        //   $("#message").text("You are outside reach of Gateway 4.");
         }
 
-        if(distance5 < .02 && localStorage.getItem('gateway') == 4){
+        if(distance5 < .02){
           playTrack1();
           $("#message").text(">>> you have entered gateway 5.");
-          $("#objective").text("The code is hidden on a sign next to a yellow bench. Port of Rotterdam. Loose the first digit.");
-          message.style.visibility = 'visible';
-          nav.style.visibility = 'hidden';
-        }else if(distance5 > .02 && localStorage.getItem('gateway') == 4){
-          $("#message").text("You are outside reach of Gateway 5.");
+        //   $("#objective").text("The code is hidden on a sign next to a yellow bench. Port of Rotterdam. Loose the first digit.");
+        //   message.style.visibility = 'visible';
+        //   nav.style.visibility = 'hidden';
+        // }else if(distance5 > .02 && localStorage.getItem('gateway') == 4){
+        //   $("#message").text("You are outside reach of Gateway 5.");
         }
 
       });
