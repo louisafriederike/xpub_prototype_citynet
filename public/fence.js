@@ -17,7 +17,6 @@ window.onload = function() {
     var distance3;
     var distance4;
     var distance5;
-    var distance6;
   
     if (navigator.geolocation) {
 
@@ -67,81 +66,58 @@ window.onload = function() {
         $("#distance4").text(distance2);
         distance5 = calculateDistance(node5Lat, node5Long,position.coords.latitude, position.coords.longitude)
         $("#distance5").text(distance);
-        distance6 = calculateDistance(node6Lat, node6Long,position.coords.latitude, position.coords.longitude)
-        $("#distance6").text(distance2);
         
         if(distance < .02){
           $("#message").text(" >>> you have entered gateway 1");
-          $("#objective").text("turn the knob to 55 and wait for a moment. the creature will reveal a 5 digit code. enter it in the port above to unlcok the first dream log.");
-          playTrack1();
-         
+          $("#objective").text("Welcome to the Gallery. Take your time, look around. When you are ready, notice the little transparent module mounted on the wall in the corner. Turn the knob to 55 and keep it steady there for a moment until a number code is revealed. Enter it in the port above, with attention to the dots, to unlock the first dream log.");
+          playTrack1();        
           message.style.visibility = 'visible';
           nav.style.visibility = 'hidden';
-
         }else if(distance > .02 && !localStorage.getItem('gateway')){
           $("#message").text("outside reach of gateway 1");
           $("#objective").text("Enter S/ash Gallery to step into the game.");
         }
 
-        if(distance2 < .02){
+        if(distance2 < .02 && localStorage.getItem('gateway')){
           playTrack1();
-          $("#message2").text("You have entered Gateway 2.");
-          $("#objective").text("You were everywhere and in everything, and every time, I instinctively new where to find you here. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. Space and time work differently in this world of yours. I have waited lifetimes for you, sitting right here on this bench. Lifetimes, turning into fractures of moments as I blink my eyes open. But I started to remember more and more. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. ");
+          $("#message").text(">>> you have entered gateway 2.");
+          $("#objective").text("You have entered the second gateway. the code is hidden on a metal door locking in high voltage. You will see three digits, loose the first to get the code.");
           message.style.visibility = 'visible';
           nav.style.visibility = 'hidden';
         }else if(distance2 > .02 && localStorage.getItem('gateway') == 1){
           $("#message2").text("You are outside reach of Gateway 2.");
         }
 
-        if(distance2 < .01){
+        if(distance3 < .02 && localStorage.getItem('gateway') == 2){
           playTrack1();
-          $("#message2").text("You have entered Gateway 2.");
-          $("#objective").text("You were everywhere and in everything, and every time, I instinctively new where to find you here. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. Space and time work differently in this world of yours. I have waited lifetimes for you, sitting right here on this bench. Lifetimes, turning into fractures of moments as I blink my eyes open. But I started to remember more and more. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. ");
+          $("#message").text(">>> you have entered gateway 3.");
+          $("#objective").text("The code is hidden on a number wheel in a window close by, spelled out in large letters. Loose the first digit.");
           message.style.visibility = 'visible';
           nav.style.visibility = 'hidden';
-        }else if(distance2 > .01){
-          $("#message2").text("You are outside reach of Gateway 2.");
+        }else if(distance3 > .02 && localStorage.getItem('gateway') == 2){
+          $("#message").text("You are outside reach of Gateway 3.");
         }
 
-        if(distance3 < .01){
+        if(distance4 < .02 && localStorage.getItem('gateway') == 3){
           playTrack1();
-          $("#message2").text("You have entered Gateway 3.");
-          $("#objective").text("You were everywhere and in everything, and every time, I instinctively new where to find you here. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. Space and time work differently in this world of yours. I have waited lifetimes for you, sitting right here on this bench. Lifetimes, turning into fractures of moments as I blink my eyes open. But I started to remember more and more. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. ");
+          $("#message").text(">>> you have entered gateway 4.");
+          $("#objective").text("The code is hidden on a tag on a small metal straigcase: OCTOZILLA, followed bu four digits. Loose the first two.");
           message.style.visibility = 'visible';
           nav.style.visibility = 'hidden';
-        }else if(distance3 > .01){
-          $("#message2").text("You are outside reach of Gateway 3.");
+        }else if(distance4 > .02 && localStorage.getItem('gateway') == 3){
+          $("#message").text("You are outside reach of Gateway 4.");
         }
 
-        if(distance4 < .01){
+        if(distance5 < .02 && localStorage.getItem('gateway') == 4){
           playTrack1();
-          $("#message2").text("You have entered Gateway 4.");
-          $("#objective").text("You were everywhere and in everything, and every time, I instinctively new where to find you here. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. Space and time work differently in this world of yours. I have waited lifetimes for you, sitting right here on this bench. Lifetimes, turning into fractures of moments as I blink my eyes open. But I started to remember more and more. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. ");
+          $("#message").text(">>> you have entered gateway 5.");
+          $("#objective").text("The code is hidden on a sign next to a yellow bench. Port of Rotterdam. Loose the first digit.");
           message.style.visibility = 'visible';
           nav.style.visibility = 'hidden';
-        }else if(distance4 > .01){
-          $("#message2").text("You are outside reach of Gateway 4.");
+        }else if(distance5 > .02 && localStorage.getItem('gateway') == 4){
+          $("#message").text("You are outside reach of Gateway 5.");
         }
 
-        if(distance5 < .01){
-          playTrack1();
-          $("#message2").text("You have entered Gateway 5.");
-          $("#objective").text("You were everywhere and in everything, and every time, I instinctively new where to find you here. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. Space and time work differently in this world of yours. I have waited lifetimes for you, sitting right here on this bench. Lifetimes, turning into fractures of moments as I blink my eyes open. But I started to remember more and more. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. ");
-          message.style.visibility = 'visible';
-          nav.style.visibility = 'hidden';
-        }else if(distance5 > .01){
-          $("#message2").text("You are outside reach of Gateway 5.");
-        }
-
-        if(distance6 < .01){
-          playTrack1();
-          $("#message2").text("You have entered Gateway 6.");
-          $("#objective").text("You were everywhere and in everything, and every time, I instinctively new where to find you here. Nested beneath the asphalt, you felt the weight of my every step as I felt the weight of your gaze on my back. Everywhere. I didn't not yet realise the meaning and weight. Space and time work differently in this world of yours. I have waited lifetimes for you, sitting right here on this bench. Lifetimes, turning into fractures of moments as I blink my eyes open. But I started to remember more and more. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. ");
-          message.style.visibility = 'visible';
-          nav.style.visibility = 'hidden';
-        }else if(distance6 > .01){
-          $("#message2").text("You are outside reach of Gateway 6.");
-        }
       });
     }
   };

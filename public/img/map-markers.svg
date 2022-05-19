@@ -23,16 +23,20 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
+     showgrid="true"
      inkscape:zoom="1.4936741"
-     inkscape:cx="265.78756"
-     inkscape:cy="269.46976"
+     inkscape:cx="273.15195"
+     inkscape:cy="292.90191"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg55" />
+     inkscape:current-layer="svg55">
+    <inkscape:grid
+       type="xygrid"
+       id="grid216" />
+  </sodipodi:namedview>
   <defs
      id="defs4">
     <style
