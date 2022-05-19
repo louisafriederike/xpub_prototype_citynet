@@ -67,7 +67,7 @@ window.onload = function() {
         distance5 = calculateDistance(node5Lat, node5Long,position.coords.latitude, position.coords.longitude)
         $("#distance5").text(distance);
         
-        if(distance < .02){
+        if(distance < .02  && !localStorage.getItem('gateway')){
           $("#message").text(" >>> you have entered gateway 1");
           $("#objective").text("Welcome to the Gallery. Take your time, look around. When you are ready, notice the little transparent module mounted on the wall in the corner. Turn the knob to 55 and keep it steady there for a moment until a number code is revealed. Enter it in the port above, with attention to the dots, to unlock the first dream log.");
           playTrack1();        
