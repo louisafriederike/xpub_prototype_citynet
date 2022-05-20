@@ -119,7 +119,7 @@
                                     console.log(localStorage.getItem('gateway'));
                                     console.log("stage 1");
                                     inputString = '';
-                                    log1.style.visibility = "visible";
+                                    log1.style.display = "flex";
                                 }
                                 
                                 if (inputString.includes('.18.15.6')){
@@ -132,7 +132,7 @@
                                     console.log(localStorage.getItem('gateway'));
                                     console.log("stage 2");
                                     inputString = '';
-                                    log2.style.visibility = "visible";
+                                    log2.style.display = "flex";
 
                                 }
 
@@ -146,7 +146,7 @@
                                     console.log(localStorage.getItem('gateway'));
                                     console.log("stage 3");
                                     inputString = '';
-                                    log3.style.visibility = "visible";
+                                    log3.style.display = "flex";
                                 }
 
                                 
@@ -160,14 +160,14 @@
                                     console.log(localStorage.getItem('gateway'));
                                     console.log("stage 4");
                                     inputString = '';
-                                    log4.style.visibility = "visible";
+                                    log4.style.display = "flex";
                                 }
 
                                 if (inputString.includes('66')){
                                     objective.style.display = "none";
                                     dreamlog.style.display = "flex";
                                     back2.style.display = "flex";
-                                    $("#dreamlog").text("This place works differently. Add all the port numbers together in the right order and translate them into letters to receive a message. Enter the message to unlock the final log.");
+                                    $("#dreamlog").text("This place works differently. Add all the port numbers you received together in the right order and translate them into letters to receive a message. Enter the message to unlock the final log.");
                                     playTrack1();
                                     localStorage.setItem('gateway','5');
                                     console.log(localStorage.getItem('gateway'));
@@ -186,7 +186,7 @@
                                     console.log(localStorage.getItem('gateway'));
                                     console.log("stage 6");
                                     inputString = '';
-                                    log5.style.visibility = "visible";
+                                    log5.style.display = "flex";
                                 }
                                 // else{
                                 //     $("#objective").text("connecting failed, inactive port. Enter correct port number to connect.");

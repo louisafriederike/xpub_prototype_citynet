@@ -141,19 +141,19 @@ button{
 }
 
 #log1{
-  visibility: hidden;
+  display: none;
 }
 #log2{
-  visibility: hidden;
+  display: none;
 }
 #log3{
-  visibility: hidden;
+  display: none;
 }
 #log4{
-  visibility: hidden;
+  display: none;
 }
 #log5{
-  visibility: hidden;
+  display: none;
 }
 
 #dreamlog{
