@@ -124,8 +124,10 @@
                         document.getElementById("file2").value = sensor; 
 
                         });
+                        
+                        socket.on('create', 'expo');
+                        socket.on('userposition', function(msg){
 
-                        socket.to('expo').on('userposition', function(msg){
 
                             console.log(msg);
 
