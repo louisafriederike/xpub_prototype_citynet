@@ -92,12 +92,20 @@
                                     
 
                                     });	
+
+                                    socket.on('node3', function(sensor){
+                            
+                                    console.log('3' + sensor);
+                                    document.getElementById("file2").value = sensor; 
+                                    
+
+                                    });
                                 </script>
                             </div>
                         </div>
                        
                         <div class="section2">
-                            <progress id="file" max="100" value="70"> 70% </progress>
+                            <progress id="file2" max="100" value="70"> 70% </progress>
                             <p>DISTANCE: <span id="distance">0</span> km</p>
                             <p> STATUS:
                                 <span id="message-node2">detecting....</span>
