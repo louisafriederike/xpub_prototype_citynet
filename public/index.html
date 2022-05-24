@@ -83,6 +83,9 @@
                             socket.on('node5', function(sensor){
                     
                             console.log(sensor);
+                            document.getElementById("file").value = sensor; 
+                            
+
                             });	
             
                             var form = document.getElementById('form');
@@ -198,6 +201,7 @@
 
                        
                         <div class="section">
+                            <progress id="file" max="100" value="70"> 70% </progress>
                             <p>DISTANCE: <span id="distance">0</span> km</p>
                       
                             <div id="tripmeter">
