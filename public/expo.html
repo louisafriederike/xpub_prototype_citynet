@@ -132,7 +132,8 @@
                     <p>DISTANCE: <span id="distance">0</span> km</p>     
                     <p> STATUS:
                         <span id="message-node3">detecting....</span>
-                    </p>                   
+                    </p>  
+                
                 </div>
             </div>
             <div class="flex-bottom">
@@ -144,11 +145,28 @@
                     </p>
                  </div>
                  <div class="section2">
-                    <progress id="file" max="100" value="30"> 70% </progress>
+                    <progress id="file5" max="100" value="30"> 70% </progress>
                     <p>DISTANCE: <span id="distance">0</span> km</p>
                     <p> STATUS:
                         <span id="message-node5">detecting....</span>
                     </p>
+                    <script>
+                        var socket = io();
+                        socket.on('data', function(data){
+        
+                            console.log(data);
+                            // document.getElementById('sample').style.opacity = data+"%"; 
+        
+                        });
+
+                        socket.on('node5', function(sensor){
+                
+                        console.log('5' + sensor);
+                        document.getElementById("file5").value = sensor; 
+                        
+
+                        });
+                    </script>  
                  </div>
                  <div class="section2">
                     <progress id="file" max="100" value="20"> 70% </progress>

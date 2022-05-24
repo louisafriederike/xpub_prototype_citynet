@@ -171,9 +171,10 @@ button{
 }
 
 .flex-top {
+  position: absolute;
+  top:0px;
   width: 100vw;
   height: 50vh;
-  /* border: 5px solid #c9cdc0; */
   border-radius: 2px;
   padding: 5px;
   padding-right: 10px;
@@ -182,10 +183,11 @@ button{
 }
 
 .flex-bottom {
+  position: absolute;
+  bottom:0px;
   width: 100vw;
   height: 50vh;
   bottom:0px;
-  /* border: 5px solid #c9cdc0; */
   border-radius: 2px;
   padding: 5px;
   padding-right: 10px;
@@ -194,6 +196,7 @@ button{
 }
 
 .section2{
+  display: flex;
   border: 2px solid black;
   border-radius:1px;
   display: flex;
@@ -202,7 +205,7 @@ button{
   margin-bottom:6px;
   color: white;
   background-color: black;
-  width: 45vw;
+  width: 30vw;
 }
 .flex-container2 {
   display: flex;
