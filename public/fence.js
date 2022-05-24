@@ -52,6 +52,8 @@ window.onload = function() {
       navigator.geolocation.watchPosition(function(position) {
         $("#currentLat").text(position.coords.latitude);
         $("#currentLon").text(position.coords.longitude);
+        socket.emit('userposition', [position.coords.latitude,position.coords.longitude]);
+
         distance = calculateDistance(node1Lat, node1Long,position.coords.latitude, position.coords.longitude)
         $("#distance").text(distance);
         distance2 = calculateDistance(node2Lat, node2Long,position.coords.latitude, position.coords.longitude)

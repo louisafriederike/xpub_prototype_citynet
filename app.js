@@ -50,6 +50,10 @@ io.on('connection', function(socket){
         console.log('[user]['+ socket.id + '][' + msg + ']');
     }); 
 
+    socket.on('userposition', (msg) => {
+        console.log('[user]['+ socket.id + '][position: ' + msg[0] + ',' + msg[1]+ ']');
+    }); 
+
 });
 
 
