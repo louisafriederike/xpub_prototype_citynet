@@ -72,6 +72,8 @@
                         </form></span> 
                         <script>
                             var socket = io();
+                           
+
                             socket.on('data', function(data){
             
                                 console.log(data);
@@ -81,9 +83,15 @@
                             });
             
                             socket.on('node5', function(sensor){
-                    
-                            console.log(sensor);
-                            document.getElementById("file").value = sensor; 
+                            
+
+                                console.log(sensor);
+                                document.getElementById("file").value = sensor; 
+                                if(distance5>0.02 && sensor==50){
+
+                                   alert('u won.')
+
+                                }
                             
 
                             });	

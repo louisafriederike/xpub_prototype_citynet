@@ -1,3 +1,9 @@
+var distance;
+var distance2;
+var distance3;
+var distance4;
+var distance5;
+
 window.onload = function() {
     var startPos;
     var node1Lat;
@@ -12,11 +18,7 @@ window.onload = function() {
     var node5Long;
     var node6Lat;
     var node6Long;
-    var distance;
-    var distance2;
-    var distance3;
-    var distance4;
-    var distance5;
+
   
     if (navigator.geolocation) {
 
@@ -69,26 +71,26 @@ window.onload = function() {
           $("#distance").text(distance2);
       }
 
-      if(localStorage.getItem('gateway') == '2'){
-       
-        $("#distance").text(distance3);
-    }
+        if(localStorage.getItem('gateway') == '2'){
+        
+          $("#distance").text(distance3);
+      }
 
-    if(localStorage.getItem('gateway') == '3'){
-       
-      $("#distance").text(distance4);
-  }
+        if(localStorage.getItem('gateway') == '3'){
+          
+          $("#distance").text(distance4);
+      }
 
-  if(localStorage.getItem('gateway') == '4'){
-       
-    $("#distance").text(distance5);
-}
+        if(localStorage.getItem('gateway') == '4'){
+            
+          $("#distance").text(distance5);
+      }
 
-if(localStorage.getItem('gateway') == '5'){
-       
-  $("#distance").text("Our journey ends here.");
-}
-
+      if(localStorage.getItem('gateway') == '5'){
+            
+        $("#distance").text("Our journey ends here.");
+      }
+      
         
        if(distance < .02){
        $("#message").text(" >>> you have entered gateway 1");
