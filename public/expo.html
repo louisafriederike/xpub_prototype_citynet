@@ -122,9 +122,15 @@
                 
                         console.log('3' + sensor);
                         document.getElementById("file2").value = sensor; 
-                        
 
                         });
+
+                        socket.to('expo').on('userposition', function(msg){
+
+                            console.log(msg);
+
+                        });
+
                     </script>   
                     </div>
                     <div class="section2">

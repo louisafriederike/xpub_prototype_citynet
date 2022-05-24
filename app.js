@@ -52,7 +52,10 @@ io.on('connection', function(socket){
 
     socket.on('userposition', (msg) => {
         console.log('[user]['+ socket.id + '][position: ' + msg[0] + ',' + msg[1]+ ']');
+        socket.to('expo').emit(socket.id, msg);
     }); 
+
+    
 
 });
 
