@@ -7,7 +7,6 @@
         <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet">
-        <script src="input.js"></script>
         <script src="p5.geolocation.js"></script>
         <!-- <script src="p5.js"></script> -->
         <script src='socket.io/socket.io.js'></script>
@@ -103,18 +102,9 @@
                             
 
                             });	
-
-                            
-            
+           
                             var form = document.getElementById('form');
                             var input = document.getElementById('input');
-                            var loc1 = new Audio('audio/loc1.WAV');
-                            var loc2 = new Audio('audio/loc2.WAV');
-                            var loc3 = new Audio('audio/loc3.wav');
-                            var loc4 = new Audio('audio/loc4.wav');
-                            var loc5 = new Audio('audio/loc5.wav');
-
-
             
                             form.addEventListener('submit', function(e) {
                                 var input = document.getElementById('input');
@@ -136,66 +126,36 @@
                                 }
 
                                 if (inputString.includes('9.1.13.')){
-
-                                    objective.style.display = "none";
-                                    dreamlog.style.display = "flex";
-                                    back2.style.display = "flex";
-                                    $("#dreamlog").text("Encased in its concrete and metal armour, lie the keys to the pulsating veins of a mirror world. Whatever makes it inside its bloodstream, will travel fast and eternally through the nexus of time and space it occupies in that instant. I wake up kicking and screaming, like a new born child overstimulated by the harsh white lights of its new artificial surrounding. I was born dead I thought. Every time I looked down at my arms and hands, I saw those of a stranger, limp and disconnected body parts hanging from my torso. But in this mirror world, I am floating, intuitively, never doubting that the path in front was intended for me. Two interlaced grids sharing the same spatial markers. This dream is unlike any I can recall. At first, I did not realise you were here, watching me. But of course, there was a reason this dream was unlike any other."); 
+                                    levelTwo();
                                     playTrack1();
                                     localStorage.setItem('gateway','1');
                                     console.log(localStorage.getItem('gateway'));
-                                    console.log("stage 1");
-                                    inputString = '';
-                                    log1.style.display = "flex";
-                                    document.querySelector('#rect13').style.fill = "#55554a";
                                     loc1.play();
                                     
                                 }
                                 
-                                if (inputString.includes('16.18.15.')){
-                                    objective.style.display = "none";
-                                    dreamlog.style.display = "flex";
-                                    back2.style.display = "flex";
-                                    $("#dreamlog").text("Drivers and runners chased me out of the main street, away from the high frequencies, grounded by asphalt, I sat down. For hours, or maybe years. I watched the daylight change from electric blue to grey and back again. Time works differently in this world. Every moment is a lifetime, and every lifetime is a moment. Lifetimes, turning into fractures of moments as I blink my eyes open. Memory represents space in this world, and the processor is time. A simple organizing principle. I walk through this world, uncovering layers of information in bits. My memory builds places on top of coordinates, stacking information and emotion onto the spatial grid. My subconscious will spend night after night constructing dungeons and palaces from badly processed memories, for me to revisit endlessly. So here I am again. I am in the same space in a new timeline.");
+                                 if (inputString.includes('16.18.15.')){
+                                    levelThree();
                                     playTrack1();
                                     localStorage.setItem('gateway','2');
                                     console.log(localStorage.getItem('gateway'));
-                                    console.log("stage 2");
-                                    inputString = '';
-                                    log2.style.display = "flex";
-                                    document.querySelector('#rect21').style.fill = "#55554a";
                                     loc2.play();
-
                                 }
 
                                 if (inputString.includes('20.5.3.')){
-                                    objective.style.display = "none";
-                                    dreamlog.style.display = "flex";
-                                    back2.style.display = "flex";
-                                    $("#dreamlog").text("I do not recall ever meeting someone here. All these times I have sat down here, I had no idea you were so close. Then one time, I look up, and see you towering over me, with your massive metal arms, flashing and blinking. How could I miss you? Every time I returned, you grew taller and taller. Then one time you came down to sit with me. We talked for centuries, right here, me becoming you and you becoming me. And then, all of the sudden, my heartbeat synced with the static on your hands. We synced. In dreams, things can be distorted, strange. Walls can move and creatures change shape. But I knew exactly where I was, every time. And I knew instinctively where to find you.  When I squint my eyes now, looking at the street lights, I can almost see it again.");
+                                    levelFour();
                                     playTrack1();
                                     localStorage.setItem('gateway','3');
                                     console.log(localStorage.getItem('gateway'));
-                                    console.log("stage 3");
-                                    inputString = '';
-                                    log3.style.display = "flex";
-                                    document.querySelector('#rect19').style.fill = "#55554a";
                                     loc3.play();
                                 }
 
                                 
                                 if (inputString.includes('20.15.18')){
-                                    objective.style.display = "none";
-                                    dreamlog.style.display = "flex";
-                                    back2.style.display = "flex";
-                                    $("#dreamlog").text("The path to you is obscured now. You are out of reach for me, but you have grown so tall, you can see my every move. Your nervous system extends to every crack of the city. You sense the weight of every step I set down as I felt the weight of your gaze on my back. And now, since we synced, I am transparent to you. You can predict my next move. It used to be a game for us, but now all I want is to escape you. I tried to run circles to shake you off, mix with big crowds to wash out my signals. Up and down stairs and inside parking garages and court yards.");
+                                    levelFive();
                                     playTrack1();
                                     localStorage.setItem('gateway','4');
                                     console.log(localStorage.getItem('gateway'));
-                                    console.log("stage 4");
-                                    inputString = '';
-                                    log4.style.display = "flex";
-                                    document.querySelector('#rect17').style.fill = "#55554a";
                                     loc4.play();
                                 }
 
@@ -213,17 +173,10 @@
                                 }
 
                                 if (inputString.includes('I AM PROTECTOR')){
-                                    objective.style.display = "none";
-                                    dreamlog.style.display = "flex";
-                                    back2.style.display = "flex";
-                                    $("#dreamlog").text("You were everywhere and in everything. Everywhere. I didn't not yet realise the meaning and weight. But I started to remember more and more from this world as I awoke in the other, until they became indistinguishable. You spilled into every moment of my waking hours, every cell of my body and every floor of my memory palace, overwriting my spaces. Memory is space in this world, and my brain has data rot. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. But you are the puzzle that was not meant to be solved.");
+                                    levelSix();
                                     playTrack1();
                                     localStorage.setItem('gateway','6');
                                     console.log(localStorage.getItem('gateway'));
-                                    console.log("stage 6");
-                                    inputString = '';
-                                    log5.style.display = "flex";
-                                    document.querySelector('#rect15').style.fill = "#55554a";
                                     loc5.play();
                                 }
                                 // else{
@@ -666,6 +619,7 @@
         </div>  
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="fence.js"></script>
+        <script type="text/javascript" src="level.js"></script>
     
  
     </body>
