@@ -1,3 +1,10 @@
+var loc1 = new Audio('audio/loc1.WAV');
+var loc2 = new Audio('audio/loc2.WAV');
+var loc3 = new Audio('audio/loc3.wav');
+var loc4 = new Audio('audio/loc4.wav');
+var loc5 = new Audio('audio/loc5.wav');
+
+
 function playTrack1(){
     var Track1 = new Audio('audio/unlocked.mp3');
     Track1.play();
