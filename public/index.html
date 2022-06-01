@@ -7,10 +7,9 @@
         <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet">
-        <script src="p5.geolocation.js"></script>
+        <script src="js/p5.geolocation.js"></script>
         <!-- <script src="p5.js"></script> -->
-        <script src='socket.io/socket.io.js'></script>
-        <script src="audio.js"></script>
+        <script src='socket.io/socket.io.js'></script>   
         <meta property="og:title" content="868 MHz" />
         <meta property="og:description" content="868 MHz is a hybrid reality game running on the same standardized frequency as the LoRa gateways of The Things Network. Chase the electric currents of the asphalt to locate gateways and encounter a being which has nested itself beneath the city streets, all the way down the power lines woven amidst its whirring epicenter." />
         <meta property="og:image" content="/img/868.png" />
@@ -64,9 +63,7 @@
         <div class="flex-container">
                     <div class="flex-left">
                         <div class="section">
-                            <!-- <progress id="file" max="100" value="70"> 70% </progress> -->
-                        
-                        
+                            <!-- <progress id="file" max="100" value="70"> 70% </progress> -->                      
                         <p>>>> PORT:</p>
                         <span><form id="form" action="">
                             <input id="input" autocomplete="off"/><button>>>></button>
@@ -77,128 +74,9 @@
                          <div class="section">
                                 <p onclick="showAbout()">ABOUT</p>
                          </div> -->
-                        <script>
-                            var socket = io();
-                           
-
-                            socket.on('data', function(data){
-            
-                                console.log(data);
-            
-                                document.getElementById('sample').style.opacity = data+"%"; 
-            
-                            });
-            
-                            socket.on('node5', function(sensor){
-                            
-
-                                console.log(sensor);
-                                document.getElementById("file").value = sensor; 
-                                if(distance5>0.02 && sensor==50){
-
-                                   alert('u won.');
-
-                                }
-                            
-
-                            });	
-           
-                            var form = document.getElementById('form');
-                            var input = document.getElementById('input');
-            
-                            form.addEventListener('submit', function(e) {
-                                var input = document.getElementById('input');
-                                var inputString = $("#input").val();
-                                log1 = document.querySelector('#log1');
-                                log2 = document.querySelector('#log2');
-                                log3 = document.querySelector('#log3');
-                                log4 = document.querySelector('#log4');
-                                log5 = document.querySelector('#log5');
-                                dreamlog = document.querySelector('#dreamlog');
-                                back2 = document.querySelector('#back2');
-                                objective = document.querySelector('#objective');
-
-                                e.preventDefault();
-                                if (input.value) {
-                                    socket.emit('chat message', input.value);
-                                    input.value = '';
-                                    console.log(inputString);
-                                }
-
-                                if (inputString.includes('9.1.13.')){
-                                    levelTwo();
-                                    playTrack1();
-                                    localStorage.setItem('gateway','1');
-                                    console.log(localStorage.getItem('gateway'));
-                                    loc1.play();
-                                    
-                                }
-                                
-                                 if (inputString.includes('16.18.15.')){
-                                    levelThree();
-                                    playTrack1();
-                                    localStorage.setItem('gateway','2');
-                                    console.log(localStorage.getItem('gateway'));
-                                    loc2.play();
-                                }
-
-                                if (inputString.includes('20.5.3.')){
-                                    levelFour();
-                                    playTrack1();
-                                    localStorage.setItem('gateway','3');
-                                    console.log(localStorage.getItem('gateway'));
-                                    loc3.play();
-                                }
-
-                                
-                                if (inputString.includes('20.15.18')){
-                                    levelFive();
-                                    playTrack1();
-                                    localStorage.setItem('gateway','4');
-                                    console.log(localStorage.getItem('gateway'));
-                                    loc4.play();
-                                }
-
-                                if (inputString.includes('66')){
-                                    objective.style.display = "none";
-                                    dreamlog.style.display = "flex";
-                                    back2.style.display = "flex";
-                                    $("#dreamlog").text("This place works differently. Add all the port numbers you received together in the right order and translate them into letters to receive a message. Enter the message to unlock the final log.");
-                                    playTrack1();
-                                    localStorage.setItem('gateway','5');
-                                    console.log(localStorage.getItem('gateway'));
-                                    console.log("stage 5");
-                                    inputString = '';
-                                    
-                                }
-
-                                if (inputString.includes('I AM PROTECTOR')){
-                                    levelSix();
-                                    playTrack1();
-                                    localStorage.setItem('gateway','6');
-                                    console.log(localStorage.getItem('gateway'));
-                                    loc5.play();
-                                }
-                                // else{
-                                //     $("#objective").text("connecting failed, inactive port. Enter correct port number to connect.");
-
-                                // }
-                            }); 
-                        </script>
-
                         </div>
 
                         <div class="section" id="dreammap">
-                            <!-- <p>MAP:</p> -->
-                           
-                             <!-- <img id="map" src="img/abstract_map.png" alt="map" usemap="#workmap" width="70%">     
-                             <map name="workmap">
-                             <area shape="circle" coords="337, 300, 44" alt="Computer" onclick="playMusic()"  href="#">
-                             </map> -->
-                             
-                             <!-- <img src="img/map-markers.svg" alt="map" usemap="#map" > -->
-                             <!-- <img src="img/map-markers.svg"> -->
-                             <!-- <div id="svg1"> -->
                                 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                                 <svg
                                    viewBox="0 0 585.85067 538.28672"
@@ -430,122 +308,6 @@
                                      onclick="breadCrumb10()"
                                      style="stroke-width:1.2924" />
                                 </svg>
-                                
-                                 
-                                 
-         
-                             <!-- <map name="map">
-                               <area shape="circle" coords="45,45,15" alt="node01" onclick="breadCrumb1()" href="#">
-                               <area shape="circle" coords="20, 85,15" alt="node01" onclick="breadCrumb1()" href="#">
-                               <area shape="circle" coords="80,110,15" alt="node01" onclick="breadCrumb2()" href="#">
-                               <area shape="circle" coords="115,100,15" alt="node01" onclick="breadCrumb3()" href="#">     
-                               <area shape="circle" coords="20,130,15" alt="node01" onclick="breadCrumb4()" href="#">
-                               <area shape="circle" coords="65,190,15" alt="node01" onclick="breadCrumb5()" href="#">
-                               <area shape="circle" coords="120,160,15" alt="node01" onclick="breadCrumb6()" href="#">
-                               <area shape="circle" coords="145,185,15" alt="node01" onclick="breadCrumb7()" href="#">
-                               <area shape="circle" coords="210,115,15" alt="node01" onclick="breadCrumb8()" href="#">
-                               <area shape="circle" coords="125,125,15" alt="node01" onclick="breadCrumb9()" href="#">
-                               <area shape="circle" coords="120,40,15" alt="node01" onclick="breadCrumb10()" href="#">
-                               <area shape="circle" coords="180,30,15" alt="node01" onclick="breadCrumb11()" href="#">
-                             </map>  -->
-                            
-         
-                             <script>
-                                //  alert("⇶ turn phone horizontally ⇶  use mobile data ⇶ turn sound on ⇶  allow location access ⇶ don't attract attention ⇶ bon vovage ⇶");
-                                 zoommap = document.querySelector('#zoommap');
-                                 log = document.querySelector('#log');
-                                 info = document.querySelector('#info');
-                                 back = document.querySelector('#back');
-                                 back2 = document.querySelector('#back2');
-                                 dreamlog = document.querySelector('#dreamlog');
-                                 objective = document.querySelector('#objective');
-         
-         
-                                 // function openMap(){
-         
-                                 //     $("#dreammap").toggleClass("zoom");
-                                 //     $("#dreammap").toggleClass("section");
-         
-                                 //     // if (zoommap.style.visibility = "hidden"){
-                                 //     //     zoommap.style.visibility = "visible";
-                                 //     // }
-                                 //     }
-         
-                                 //     function closeMap(){
-         
-                                 //     $("#dreammap").toggleClass("zoom");
-                                 //     $("#dreammap").toggleClass("section");
-                                 //     // if (zoommap.style.visibility = "visible"){
-                                 //     //     zoommap.style.visibility = "hidden";
-                                 //     // }                         
-                                 //     }
-         
-                                 function showLog(){                          
-                                    log.style.visibility = "visible";
-                                    back.style.visibility = "visible"; 
-                                    $("#info").text("");                  
-                                  
-                                 }
-         
-                                 function showHelp(){                          
-                                    log.style.visibility = "visible";
-                                    $("#info").text("Locate the closest gateway by following the instructions in the text field and clicking on the landmarks on the map to move accordingly. As soon as you are in close proximity of a module, the game will detect this and display information on how to locate and operate the module. When set to the correct frequency, the module will reveal the local port code after a few seconds. Enter the received code into the port above to unlock one of five dream logs. The shape of the map is highly abstracted and should not be solely used for navigation. Follow the blue markings on the pavemment to make your way through the mirror world.");
-                                    back.style.visibility = "visible";
-                                 }
-         
-                                 function showAbout(){  
-                                     log.style.visibility = "visible";                        
-                                     $("#info").text("868 MHz is a hybrid reality game running on the same standardized frequency as the LoRa gateways of The Things Network. Chase the electric currents of the asphalt to locate gateways and encounter a being which has nested itself beneath the city streets, all the way down the power lines woven amidst its whirring epicenter. Early release for Tec Art 2022, in progress master graduation work by Experimental Publishing student Louisa Teichmann. Module cases designed and 3D printed by Roos Groothuizen. Sound design by Kevin Stam. Logo design by Camilo García A. Realised in support by Planetart, TETEM, Joseph Knierzinger, Michael Murthaugh, Cristina Cochior and in inspiration and conversation with Mika Motskobili and with mental support by Micah Snijkers. Don't hate the game, hate the players. Just kidding, I hope you're finding your way ok.");
-                                     back.style.visibility = "visible";
-                                     
-                                 }
-         
-                                 function backAgain(){  
-                                     log.style.visibility = "hidden";                        
-                                     back.style.visibility = "hidden";
-                                 }
-         
-                                 function backAgain2(){  
-                                     dreamlog.style.display = "none";                       
-                                     back2.style.display = "none";
-                                     objective.style.display = "flex";
-                                 }
-         
-                                 function log1Open(){  
-                                     
-                                     dreamlog.style.display = "flex";
-                                     back2.style.display = "flex";
-                                     $("#dreamlog").text("Encased in its concrete and metal armour, lie the keys to the pulsating veins of a mirror world. Whatever makes it inside its bloodstream, will travel fast and eternally through the nexus of time and space it occupies in that instant. I wake up kicking and screaming, like a new born child overstimulated by the harsh white lights of its new artificial surrounding. I was born dead I thought. Every time I looked down at my arms and hands, I saw those of a stranger, limp and disconnected body parts hanging from my torso. But in this mirror world, I am floating, intuitively, never doubting that the path in front was intended for me. Two interlaced grids sharing the same spatial markers. This dream is unlike any I can recall. At first, I did not realise you were here, watching me. But of course, there was a reason this dream was unlike any other."); 
-                            
-                              }
-         
-                                 function log2Open(){  
-                                     dreamlog.style.display = "flex";
-                                     back2.style.display = "flex";
-                                     $("#dreamlog").text("Drivers and runners chased me out of the main street, away from the high frequencies, grounded by asphalt, I sat down. For hours, or maybe years. I watched the daylight chance from electric blue to grey and back again. Time works differently in this world. Every moment is a lifetime, and every lifetime is a moment. And as soon as I wake up, it all feels insignificant. Memory represents space in this world, and the processor is time. A simple organizing principle. I walk through this world, uncovering layers of information in bits. My memory builds places on top of coordinates, stacking information and emotion onto the spatial grid. My subconscious will spend night after night constructing dungeons and palaces from badly processed memories, for me to revisit endlessly. So here I am again. I am in the same space in a new timeline.");
-                                 }
-         
-                                 function log3Open(){  
-                                     dreamlog.style.display = "flex";
-                                     back2.style.display = "flex";
-                                     $("#dreamlog").text("I do not recall ever meeting someone here. All these times I have sat down here, I had no idea you were so close. Then one time, I look up, and see you towering over me, with your massive metal arms, flashing and blinking. How could I miss you? Every time I returned, you grew taller and taller. Then one time you came down to sit with me. We talked for centuries, right here, me becoming you and you becoming me. And then, all of the sudden, my heartbeat synced with the static on your hands. We synced. In dreams, things can be distorted, strange. Walls can move and creatures change shape. But I knew exactly where I was, every time. And I knew instinctively where to find you.  When I squint my eyes now, looking at the street lights, I can almost see it again.");
-                                 }
-         
-                                 function log4Open(){ 
-                                     dreamlog.style.display = "flex";
-                                     back2.style.display = "flex"; 
-                                     $("#dreamlog").text("The path to you is obscured now. You are out of reach for me, but you have grown so tall, you can see my every move. Your nervous system extends to every crack of the city. You sense the weight of every step I set down as I felt the weight of your gaze on my back. And now, since we synced, I am transparent to you. You can predict my next move. It used to be a game for us, but now all I want is to escape you. I tried to run circles to shake you off, mix with big crowds to wash out my signals. Up and down stairs and inside parking garages and court yards.");
-                                 }
-         
-                                 function log5Open(){ 
-                                     dreamlog.style.display = "flex";
-                                     back2.style.display = "flex"; 
-                                     $("#dreamlog").text("You were everywhere and in everything. Everywhere. I didn't not yet realise the meaning and weight. But I started to remember more and more from this world as I awoke in the other, until they became indistinguishable. You spilled into every moment of my waking hours, every cell of my body and every floor of my memory palace, overwriting my spaces. Memory is space in this world, and my brain has data rot. Right here is the home you built for us. I recognize the shapes of the walls and the sounds of the water. The canary yellow. It was here. It was right here. But you are the puzzle that was not meant to be solved.");
-                                 }
-         
-         
-         
-                             </script>
                          </div>
 
                         <div class="section">
@@ -598,11 +360,6 @@
                                         <div class="section" id="back" onclick="backAgain()">
                                             ↪
                                             </div>
-                                        
-                                        
-
-                        <!-- <div class="section" id="zoommap">
-                        </div> -->
                     </div>
                        
 
@@ -618,9 +375,8 @@
 
         </div>  
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="fence.js"></script>
-        <script type="text/javascript" src="level.js"></script>
-    
- 
+        <script type="text/javascript" src="js/fence.js"></script>
+        <script type="text/javascript" src="js/level.js"></script>
+        <script type="text/javascript" src="js/input.js"></script>   
     </body>
 </html>
