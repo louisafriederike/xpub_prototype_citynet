@@ -16,6 +16,23 @@
     </head>
     <body>
         <script>
+            window.onload = checkLevel();
+            function checkLevel(){
+              if(localStorage.getItem(gateway)) {
+                levelTwo();
+              } 
+              else {
+                levelOne();
+              };
+              if(localStorage.getItem(gateway == "2")) {
+                levelThree();
+              } 
+              else {
+                levelOne();
+              };
+            };
+            </script>
+        <script>
             let lat, lon;
                 if ('geolocation' in navigator) {
                 console.log('geolocation available');
@@ -68,12 +85,12 @@
                         <span><form id="form" action="">
                             <input id="input" autocomplete="off"/><button>>>></button>
                         </form></span> 
-                        <!-- <div class="section">
+                        <div class="section">
                             <p onclick="showHelp()">HELP</p>
                          </div>
                          <div class="section">
                                 <p onclick="showAbout()">ABOUT</p>
-                         </div> -->
+                         </div>
                         </div>
 
                         <div class="section" id="dreammap">
@@ -339,19 +356,27 @@
                             <p></p>  
                             </div>
                             <div class="section" id="back2" onclick="backAgain2()">
-                                ↪
+                                ↪ log 
                         </div>
                         <div class="section" id="objective">
                         <p>OBJECTIVE:<br>Enter S/ash Gallery to step into the game and unlock gateway 1. Tap the different markers on the map in order to navigate and receive objectives. When set to the right digit, the modules in the locations will reveal a port number. Enter it above to collect dream logs. Follow the blue markers on the pavement to make your way through the landmarks.</p>  
                         </div>
-                        <div class="section" id="fulllog">
-                                           
-                            <p id="log1" onclick="log1Open()">Log 1     PORT: 9.1.13.     03:02:00         02-04-22<br></p>
-                               <p id="log2" onclick="log2Open()">Log 2     PORT: 16.18.15.     02:42:00         13-04-22<br></p>
-                                   <p id="log3" onclick="log3Open()">Log 3     PORT: 20.5.3.     03:36:00         25-04-22<br></p>
-                                       <p id="log4" onclick="log4Open()">Log 4     PORT: 20.15.18     03:86:00         07-05-22<br></p>
-                                           <p id="log5" onclick="log5Open()">Log 5     PORT: 868     06:86:00         17-05-22<br></p>   
-                                           </div> 
+                        
+                        <div class="section" id="log1">          
+                        <p onclick="log1Open()">LOG 1   ✹   PORT: 9.1.13.       03:02:00         02-04-22<br></p>
+                        </div> 
+                        <div class="section" id="log2">   
+                        <p onclick="log2Open()">LOG 2   ✹   PORT: 16.18.15.     02:42:00         13-04-22<br></p>
+                        </div>
+                        <div class="section" id="log3">             
+                        <p onclick="log3Open()">LOG 3   ✹   PORT: 20.5.3.       03:36:00         25-04-22<br></p>
+                        </div>
+                        <div class="section" id="log4">   
+                        <p onclick="log4Open()">LOG 4   ✹   PORT: 20.15.18      03:86:00         07-05-22<br></p>
+                        </div>
+                        <div class="section" id="log5">                 
+                        <p onclick="log5Open()">LOG 5   ✹   PORT: 868           06:86:00         17-05-22<br></p>   
+                        </div>              
                        
                         <div class="section" id="log">
                         <p id="info"></p>

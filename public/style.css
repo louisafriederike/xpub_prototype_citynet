@@ -139,38 +139,62 @@ button{
 
 #back{
   visibility: hidden;
-  width: 6%;
+  width: 22%;
+  background-color: black;
+  color: black;
+  box-shadow: inset 0px -5px 30px 3px #958549;
+}
+
+#back2{
+  display: none; 
+  width: 22%;
+  background-color: black;
+  color: black;
+  box-shadow: inset 0px -5px 30px 3px #958549;
 }
 
 #log1{
   display: none;
+  background-color: #55554a;
+  color: black;
+  box-shadow:  inset 0px -1px 20px 2px #9b9b8d;
 }
+
+.activelog{
+  background-color: #f00;
+  color: white;
+  box-shadow: inset 0px -1px 20px 2px #87874b;
+}
+
 #log2{
   display: none;
+  background-color: #55554a;
+  color: black;
+  box-shadow:  inset 0px -1px 20px 2px #9b9b8d;
 }
 #log3{
   display: none;
+  background-color: #55554a;
+  color: black;
+  box-shadow: inset 0px -1px 20px 2px #9b9b8d;
 }
 #log4{
   display: none;
+  background-color: #55554a;
+  color: black;
+  box-shadow: inset 0px -1px 20px 2px #9b9b8d;
 }
 #log5{
   display: none;
+  background-color: #55554a;
+  color: black;
+  box-shadow: inset 0px -1px 20px 2px #9b9b8d;
 }
 
 #dreamlog{
   display: none;
 }
 
-#back2{
-  display: none; 
-  width: 6%;
-}
-
-#fulllog{
-  background-color: #55554a;
-  color: black;
-}
 
 .flex-top {
   position: absolute;
