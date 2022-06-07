@@ -16,6 +16,7 @@ back2 = document.querySelector('#back2');
 objective = document.querySelector('#objective');
 
 function levelOne(){
+    console.log('lvl 1');
     inputString = '';
     dreamlog.style.display = "none";
     back2.style.display = "none";
@@ -31,9 +32,11 @@ function levelOne(){
     document.querySelector('#rect17').style.fill = "black";
     document.querySelector('#rect15').style.fill = "black";
 
+
 }
 
 function levelTwo(){
+    console.log('lvl 2');
     dreamlog.style.display = "flex";
     $("#dreamlog").text("Encased in concrete and metal armour, lie the keys to the pulsating veins of a mirror world. Whatever makes it inside its bloodstream, will travel fast and eternally through the nexus of time and space it occupies in that instant. I wake up kicking and screaming, like a new born child overstimulated by the harsh white lights of its new artificial surrounding. I was born dead I thought. Every time I looked down at my arms and hands, I saw those of a stranger, limp and disconnected body parts hanging from my torso. But in this mirror world, I am floating, intuitively, never doubting that the path in front was intended for me. Two interlaced grids sharing the same spatial markers. This dream is unlike any I can recall. At first, I did not realise you were here, watching me. But of course, there was a reason this dream was unlike any other."); 
     log1.style.display = "flex";

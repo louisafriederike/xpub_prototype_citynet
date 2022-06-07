@@ -15,23 +15,7 @@
         <meta property="og:image" content="/img/868.png" />
     </head>
     <body>
-        <script>
-            window.onload = checkLevel();
-            function checkLevel(){
-              if(localStorage.getItem(gateway)) {
-                levelTwo();
-              } 
-              else {
-                levelOne();
-              };
-              if(localStorage.getItem(gateway == "2")) {
-                levelThree();
-              } 
-              else {
-                
-              };
-            };
-            </script>
+
         <script>
             let lat, lon;
                 if ('geolocation' in navigator) {
@@ -402,6 +386,37 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="js/fence.js"></script>
         <script type="text/javascript" src="js/level.js"></script>
-        <script type="text/javascript" src="js/input.js"></script>   
+        <script type="text/javascript" src="js/input.js"></script>
+        <script>
+         window.onload = checkLevel();
+         function checkLevel(){
+
+         console.log(localStorage.getItem('gateway'));
+  
+         if (localStorage.getItem("gateway")!==null){
+             
+           if(localStorage.getItem("gateway") == "1") {
+            levelTwo();
+           } 
+          
+           if(localStorage.getItem("gateway") == "2") {
+             levelThree();
+           } 
+
+           if(localStorage.getItem("gateway") == "3") {
+             levelFour();
+           } 
+
+           if(localStorage.getItem("gateway") == "4") {
+             levelFive();
+           } 
+
+           if(localStorage.getItem("gateway") == "5") {
+             levelSix();
+           } 
+
+         }else {levelOne()}; 
+         };
+         </script>   
     </body>
 </html>
