@@ -88,7 +88,7 @@ window.onload = function() {
           $("#distance").text(distance5);
       }
 
-      if(localStorage.getItem('gateway') == '5'){
+      if(localStorage.getItem('gateway') == '6'){
             
         $("#distance").text("Our journey ends here.");
       }

@@ -89,10 +89,10 @@ form.addEventListener('submit', function(e) {
         console.log(localStorage.getItem('gateway'));
         loc5.play();
     }
-    // else{
-    //     $("#objective").text("connecting failed, inactive port. Enter correct port number to connect.");
+    else{
+        $("#input").text("inactive port");
 
-    // }
+    }
 }); 
 
 zoommap = document.querySelector('#zoommap');

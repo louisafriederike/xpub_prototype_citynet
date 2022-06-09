@@ -67,7 +67,7 @@
                             <!-- <progress id="file" max="100" value="70"> 70% </progress> -->                      
                         <p>>>> PORT:</p>
                         <span><form id="form" action="">
-                            <input id="input" autocomplete="off"/><button>>>></button>
+                            <input id="input" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();"/><button>>>></button>
                         </form></span> 
                      </div>
 
@@ -151,8 +151,8 @@
                                      height="39.418907"
                                      transform="rotate(-1)"
                                      id="rect15"
-                                     onclick="objective5()"
-                                     onclick="objective5()" />
+                                     onclick="objective5(), R1()"/>
+                                    
                                   <rect
                                      class="f"
                                      x="220.85062"
@@ -308,7 +308,7 @@
                                 </svg>
                          </div>
 
-                        <div class="section">
+                        <div class="section" id="nav-console">
                             
                             <p>DISTANCE: <span id="distance">0</span> km</p>
                       

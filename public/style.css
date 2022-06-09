@@ -118,6 +118,10 @@ body {
   margin: 5px;
 }
 
+#nav-console{
+  color: #c9cdc0;
+}
+
 #scene1{
   display: none;
 }
@@ -295,4 +299,12 @@ button{
 .flex-container2 {
   display: flex;
   flex-direction: row;
+}
+
+#rect13:active{
+  fill:yellow;
+}
+
+#rect15:active{
+  fill:yellow;
 }

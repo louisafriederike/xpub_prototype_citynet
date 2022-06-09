@@ -14,6 +14,22 @@ log5 = document.querySelector('#log5');
 dreamlog = document.querySelector('#dreamlog');
 back2 = document.querySelector('#back2');
 objective = document.querySelector('#objective');
+r1 = document.querySelector('#rect13');
+r2 = document.querySelector('#rect23');
+r3 = document.querySelector('#rect35');
+r4 = document.querySelector('#rect37');
+r5 = document.querySelector('#rect27');
+r6 = document.querySelector('#rect39');
+r7 = document.querySelector('#rect41');
+r8 = document.querySelector('#rect43');
+r9 = document.querySelector('#rect19');
+r10 = document.querySelector('#rect45');
+r11 = document.querySelector('#rect47');
+r12 = document.querySelector('#rect17');
+r13 = document.querySelector('#rect49');
+r14 = document.querySelector('#rect51');
+r15 = document.querySelector('#rect15');
+
 
 function levelOne(){
     console.log('lvl 1');
@@ -124,4 +140,10 @@ function levelSix(){
     back2.style.display = "flex";
 
 }
+
+function R1(){
+    // r1.style.fill = "#c9cd00";
+
+    
+};
 
