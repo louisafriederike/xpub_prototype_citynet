@@ -69,13 +69,9 @@
                         <span><form id="form" action="">
                             <input id="input" autocomplete="off"/><button>>>></button>
                         </form></span> 
-                        <div class="section">
-                            <p onclick="showHelp()">HELP</p>
-                         </div>
-                         <div class="section">
-                                <p onclick="showAbout()">ABOUT</p>
-                         </div>
-                        </div>
+                     </div>
+
+                     
 
                         <div class="section" id="dreammap">
                                 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -120,7 +116,7 @@
                                   <defs
                                      id="defs4">
                                     <style
-                                       id="style2">.d,.e,.f{stroke:red;}.d,.e,.f,.g{stroke-miterlimit:10;}.d,.e,.g{fill:none;}.d,.f,.g{stroke-width:3px;}.h{fill:#ff0;}.g{stroke:#ff0;}</style>
+                                       id="style2">.d,.e,.f{stroke:#ff2400cf;}.d,.e,.f,.g{stroke-miterlimit:10;}.d,.e,.g{fill:none;}.d,.f,.g{stroke-width:3px;}.h{fill:rgb(103, 136, 177);}.g{stroke:rgb(69, 91, 118);}</style>
                                   </defs>
                                   <g
                                      id="a"
@@ -155,6 +151,7 @@
                                      height="39.418907"
                                      transform="rotate(-1)"
                                      id="rect15"
+                                     onclick="objective5()"
                                      onclick="objective5()" />
                                   <rect
                                      class="f"
@@ -347,28 +344,36 @@
                         </div>
                         
                         <div class="section" id="log1">          
-                        <p onclick="log1Open()">LOG 1   ✹   PORT: 9.1.13.       03:02:00         02-04-22<br></p>
+                        <p onclick="log1Open()">LOG 1  03:02:00  02-04-22  PORT: 9.1.13.<br></p>
                         </div> 
                         <div class="section" id="log2">   
-                        <p onclick="log2Open()">LOG 2   ✹   PORT: 16.18.15.     02:42:00         13-04-22<br></p>
+                        <p onclick="log2Open()">LOG 2  02:42:00  13-04-22  PORT: 16.18.15.<br></p>
                         </div>
                         <div class="section" id="log3">             
-                        <p onclick="log3Open()">LOG 3   ✹   PORT: 20.5.3.       03:36:00         25-04-22<br></p>
+                        <p onclick="log3Open()">LOG 3  03:36:00  25-04-22  PORT: 20.5.3.<br></p>
                         </div>
                         <div class="section" id="log4">   
-                        <p onclick="log4Open()">LOG 4   ✹   PORT: 20.15.18      03:86:00         07-05-22<br></p>
+                        <p onclick="log4Open()">LOG 4  03:86:00  07-05-22  PORT: 20.15.18<br></p>
                         </div>
                         <div class="section" id="log5">                 
-                        <p onclick="log5Open()">LOG 5   ✹   PORT: 868           06:86:00         17-05-22<br></p>   
+                        <p onclick="log5Open()">LOG 5  06:86:00  17-05-22  PORT: 868<br></p>   
                         </div>              
                        
                         <div class="section" id="log">
                         <p id="info"></p>
 
-                                        </div>   
-                                        <div class="section" id="back" onclick="backAgain()">
-                                            ↪
-                                            </div>
+                           </div>   
+                           <div class="section" id="back" onclick="backAgain()">
+                              ↪
+                           </div>
+                           <!-- <div class="section2">
+                              <div class="button-base">
+                                    <p onclick="showHelp()">HELP</p>
+                              </div>
+                              <div class="button-base">
+                                    <p onclick="showAbout()">ABOUT</p>
+                              </div>
+                           </div> -->
                     </div>
                        
 
@@ -381,6 +386,7 @@
                     <input id="icon" width="22%" class="nav-track" type="image" src="img/868.png"  onclick="playMusic1()" style="visibility: visible;"/>  -->
                 
             </div>
+
 
         </div>  
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

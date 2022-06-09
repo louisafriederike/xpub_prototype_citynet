@@ -93,14 +93,29 @@ body {
 } */ 
 
 .section{
-  border: 2px solid black;
-  border-radius:1px;
+  border: 2px solid #3d3f38;
+  border-radius:6px;
   display: flex;
   flex-direction: column;
   padding: 5px;
   margin-bottom:6px;
-  color: white;
-  background-color: black;
+  color: rgb(88, 130, 255);
+  background-color: #0e0e0a;
+}
+.section2{
+  border: 2px solid #3d3f38;
+  border-radius:6px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin-bottom:6px;
+  color: rgb(88, 130, 255);
+  background-color: #0e0e0a;
+}
+
+.button-base{
+  padding: 5px;
+  margin: 5px;
 }
 
 #scene1{
@@ -118,7 +133,7 @@ body {
 }
 
 button{
-  background-color: yellow;
+  background-color: rgb(103, 136, 177);
   font: 1.2em/1.6 'Inconsolata', monospace;
   color:black;
   border-radius: 2px;
@@ -133,62 +148,53 @@ button{
 
 #log{
   visibility: hidden; 
-  background-color: #55554a;
+  background-color: rgb(177, 193, 213);
   color: black;
 }
 
 #back{
   visibility: hidden;
   width: 22%;
-  background-color: black;
+  background-color: rgb(103, 136, 177);
   color: black;
-  box-shadow: inset 0px -5px 30px 3px #958549;
+  
 }
 
 #back2{
   display: none; 
   width: 22%;
-  background-color: black;
+  background-color: rgb(103, 136, 177);
   color: black;
-  box-shadow: inset 0px -5px 30px 3px #958549;
 }
 
 #log1{
   display: none;
-  background-color: #55554a;
+  background-color: rgb(177, 193, 213);
   color: black;
-  box-shadow:  inset 0px -1px 20px 2px #9b9b8d;
 }
 
 .activelog{
-  background-color: #f00;
-  color: white;
-  box-shadow: inset 0px -1px 20px 2px #87874b;
 }
 
 #log2{
   display: none;
-  background-color: #55554a;
+  background-color: rgb(177, 193, 213);
   color: black;
-  box-shadow:  inset 0px -1px 20px 2px #9b9b8d;
 }
 #log3{
   display: none;
-  background-color: #55554a;
+  background-color: rgb(177, 193, 213);
   color: black;
-  box-shadow: inset 0px -1px 20px 2px #9b9b8d;
 }
 #log4{
   display: none;
-  background-color: #55554a;
+  background-color: rgb(177, 193, 213);
   color: black;
-  box-shadow: inset 0px -1px 20px 2px #9b9b8d;
 }
 #log5{
   display: none;
-  background-color: #55554a;
+  background-color: rgb(177, 193, 213);
   color: black;
-  box-shadow: inset 0px -1px 20px 2px #9b9b8d;
 }
 
 #dreamlog{

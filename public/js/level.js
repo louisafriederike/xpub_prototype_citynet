@@ -44,7 +44,7 @@ function levelTwo(){
     log3.style.display = "none";
     log4.style.display = "none";
     log5.style.display = "none";
-    document.querySelector('#rect13').style.fill = "#55554a";
+    document.querySelector('#rect13').style.fill = "#c9cdc0";
     document.querySelector('#rect21').style.fill = "black";
     document.querySelector('#rect19').style.fill = "black";
     document.querySelector('#rect17').style.fill = "black";
@@ -61,8 +61,8 @@ function levelThree(){
     log3.style.display = "none";
     log4.style.display = "none";
     log5.style.display = "none";
-    document.querySelector('#rect13').style.fill = "#55554a";
-    document.querySelector('#rect21').style.fill = "#55554a";
+    document.querySelector('#rect13').style.fill = "#c9cdc0";
+    document.querySelector('#rect21').style.fill = "#c9cdc0";
     document.querySelector('#rect19').style.fill = "black";
     document.querySelector('#rect17').style.fill = "black";
     document.querySelector('#rect15').style.fill = "black";
@@ -79,9 +79,9 @@ function levelFour(){
     log3.style.display = "flex";
     log4.style.display = "none";
     log5.style.display = "none";
-    document.querySelector('#rect13').style.fill = "#55554a";
-    document.querySelector('#rect21').style.fill = "#55554a";
-    document.querySelector('#rect19').style.fill = "#55554a";
+    document.querySelector('#rect13').style.fill = "#c9cdc0";
+    document.querySelector('#rect21').style.fill = "#c9cdc0";
+    document.querySelector('#rect19').style.fill = "#c9cdc0";
     document.querySelector('#rect17').style.fill = "black";
     document.querySelector('#rect15').style.fill = "black";
     objective.style.display = "none";
@@ -97,10 +97,10 @@ function levelFive(){
     log3.style.display = "flex";
     log4.style.display = "flex";
     log5.style.display = "none";
-    document.querySelector('#rect13').style.fill = "#55554a";
-    document.querySelector('#rect21').style.fill = "#55554a";
-    document.querySelector('#rect19').style.fill = "#55554a";
-    document.querySelector('#rect17').style.fill = "#55554a";
+    document.querySelector('#rect13').style.fill = "#c9cdc0";
+    document.querySelector('#rect21').style.fill = "#c9cdc0";
+    document.querySelector('#rect19').style.fill = "#c9cdc0";
+    document.querySelector('#rect17').style.fill = "#c9cdc0";
     document.querySelector('#rect15').style.fill = "black";
     objective.style.display = "none";
     back2.style.display = "flex";
@@ -115,11 +115,11 @@ function levelSix(){
     log3.style.display = "flex";
     log4.style.display = "flex";
     log5.style.display = "flex";
-    document.querySelector('#rect13').style.fill = "#55554a";
-    document.querySelector('#rect21').style.fill = "#55554a";
-    document.querySelector('#rect19').style.fill = "#55554a";
-    document.querySelector('#rect17').style.fill = "#55554a";
-    document.querySelector('#rect15').style.fill = "#55554a";
+    document.querySelector('#rect13').style.fill = "#c9cdc0";
+    document.querySelector('#rect21').style.fill = "#c9cdc0";
+    document.querySelector('#rect19').style.fill = "#c9cdc0";
+    document.querySelector('#rect17').style.fill = "#c9cdc0";
+    document.querySelector('#rect15').style.fill = "#c9cdc0";
     objective.style.display = "none";
     back2.style.display = "flex";
 
