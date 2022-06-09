@@ -135,7 +135,6 @@ body {
   -moz-appearance: none;
   appearance: none;
   border-radius: 5px;
-  width: 78vw;
 }
 
 button{
@@ -151,7 +150,6 @@ button{
   margin-left: 2px;
   padding-left: 4px;
   padding-right: 4px;
-  width: 12vw;
 }
 
 button:active{
@@ -313,3 +311,8 @@ button:active{
 #rect15:active{
   fill:yellow;
 }
+
+.wrapper{
+  margin: 0 auto;
+  max-width: 550px;
+  }
