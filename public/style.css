@@ -99,7 +99,7 @@ body {
   flex-direction: column;
   padding: 5px;
   margin-bottom:6px;
-  color: rgb(88, 130, 255);
+  color: #ff2400;
   background-color: #0e0e0a;
 }
 .section2{
@@ -139,7 +139,7 @@ body {
 }
 
 button{
-  background-color: rgb(103, 136, 177);
+  background-color: rgb(129, 135, 121);
   font: 1.2em/1.6 'Inconsolata', monospace;
   color:black;
   border-radius: 5px;
@@ -148,9 +148,14 @@ button{
   -ms-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding-left: 5px;
+  margin-left: 2px;
+  padding-left: 4px;
   padding-right: 4px;
   width: 12vw;
+}
+
+button:active{
+  background-color: rgb(65, 184, 255);
 }
 
 
@@ -178,7 +183,7 @@ button{
 
 #log1{
   display: none;
-  background-color: rgb(88, 130, 255);
+  background-color: rgb(65, 184, 255);
   border: none;
   border-radius: 0px;
   color: black;
@@ -189,7 +194,7 @@ button{
 
 #log2{
   display: none;
-  background-color: rgb(88, 130, 255);
+  background-color: rgb(65, 184, 255);
   color: black;
   border-radius: 0px;
   border: none;
@@ -198,7 +203,7 @@ button{
 }
 #log3{
   display: none;
-  background-color: rgb(88, 130, 255);
+  background-color: rgb(65, 184, 255);
   color: black;
   border-radius: 0px;
   border: none;
@@ -207,7 +212,7 @@ button{
 }
 #log4{
   display: none;
-  background-color: rgb(88, 130, 255);
+  background-color: rgb(65, 184, 255);
   color: black;
   border-radius: 0px;
   border: none;
@@ -216,7 +221,7 @@ button{
 }
 #log5{
   display: none;
-  background-color: rgb(88, 130, 255);
+  background-color: rgb(65, 184, 255);
   color: black;
   border-radius: 0px;
   border: none;
@@ -226,31 +231,31 @@ button{
 
 #log1:active{
 
-  background-color: rgb(167, 189, 255);
+  background-color: rgb(129, 135, 121);
 
 }
 
 #log2:active{
 
-  background-color: rgb(167, 189, 255);
+  background-color: rgb(129, 135, 121);
 
 }
 
 #log3:active{
 
-  background-color: rgb(167, 189, 255);
+  background-color: rgb(129, 135, 121);
 
 }
 
 #log4:active{
 
-  background-color: rgb(167, 189, 255);
+  background-color: rgb(129, 135, 121);
 
 }
 
 #log5:active{
 
-  background-color: rgb(167, 189, 255);
+  background-color: rgb(129, 135, 121);
 
 }
 
