@@ -130,13 +130,14 @@ body {
   -ms-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border-radius: 5px;
 }
 
 button{
   background-color: rgb(103, 136, 177);
   font: 1.2em/1.6 'Inconsolata', monospace;
   color:black;
-  border-radius: 2px;
+  border-radius: 5px;
   border: 2px solid black;
   -webkit-appearance: none;
   -ms-appearance: none;
