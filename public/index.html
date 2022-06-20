@@ -7,8 +7,8 @@
         <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet">
-        <script src="js/p5.js"></script>
-        <script src="js/p5.geolocation.js"></script>
+        <!-- <script src="js/p5.js"></script>
+        <script src="js/p5.geolocation.js"></script> -->
 
         <script src='socket.io/socket.io.js'></script>   
         <meta property="og:title" content="868 MHz" />
@@ -16,51 +16,6 @@
         <meta property="og:image" content="/img/868.png" />
     </head>
     <body>
-
-        <script>
-            let lat, lon;
-            if ('geolocation' in navigator) {
-                console.log('geolocation available');
-                navigator.geolocation.getCurrentPosition(async position => {
-                    let lat, lon, weather, air;
-                    try {
-                        lat = position.coords.latitude;
-                        lon = position.coords.longitude;
-                        // document.getElementById('latitude').textContent = lat.toFixed(2);
-                        // document.getElementById('longitude').textContent = lon.toFixed(2);
-                        const api_url = `weather/${lat},${lon}`;
-                        const response = await fetch(api_url);
-                        const json = await response.json();
-                        weather = json.weather.currently;
-                        air = json.air_quality.results[0].measurements[0];
-                        document.getElementById('summary').textContent = weather.summary;
-                        document.getElementById('temp').textContent = weather.temperature;
-                        document.getElementById('aq_parameter').textContent = air.parameter;
-                        document.getElementById('aq_value').textContent = air.value;
-                        document.getElementById('aq_units').textContent = air.unit;
-                        document.getElementById('aq_date').textContent = air.lastUpdated;
-                    } catch (error) {
-                        console.error(error);
-                            air = { value: -1 };
-                           //  document.getElementById('aq_value').textContent = 'NO READING';
-                    }
-
-                        const data = { lat, lon, weather, air };
-                        const options = {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(data)
-                        };
-                        const db_response = await fetch('/api', options);
-                        const db_json = await db_response.json();
-                        console.log(db_json);
-                    });
-                    } else {
-                    console.log('geolocation not available');
-                    }            
-        </script>
         <div class="wrapper">
         <div class="flex-container">
                     <div class="flex-left">
@@ -182,7 +137,7 @@
                                      id="rect21"
                                      onclick="objective2()" />
                                   <rect
-                                     class="h"
+                                     class="h crumbs"
                                      x="48.299683"
                                      y="204.54538"
                                      width="25.757486"
@@ -217,7 +172,7 @@
                                      id="path33"
                                      style="fill:#ff0000" />
                                   <rect
-                                     class="h"
+                                     class="h crumbs"
                                      x="145.88861"
                                      y="246.20175"
                                      width="25.757486"
@@ -227,7 +182,7 @@
                                      onclick="breadCrumb2()"
                                      style="stroke-width:1.2924" />
                                   <rect
-                                     class="h"
+                                     class="h crumbs"
                                      x="50.484272"
                                      y="334.53384"
                                      width="25.757486"
@@ -237,7 +192,7 @@
                                      onclick="breadCrumb3()"
                                      style="stroke-width:1.2924" />
                                   <rect
-                                     class="h"
+                                     class="h crumbs"
                                      x="146.8737"
                                      y="446.49927"
                                      width="25.757486"
@@ -247,7 +202,7 @@
                                      onclick="breadCrumb4()"
                                      style="stroke-width:1.2924" />
                                   <rect
-                                     class="h"
+                                     class="h crumbs"
                                      x="233.34877"
                                      y="392.82779"
                                      width="25.757486"
@@ -257,7 +212,7 @@
                                      onclick="breadCrumb5()"
                                      style="stroke-width:1.2924" />
                                   <rect
-                                     class="h"
+                                     class="h crumbs"
                                      x="326.81818"
                                      y="454.86319"
                                      width="25.757486"
@@ -267,7 +222,7 @@
                                      onclick="breadCrumb6()"
                                      style="stroke-width:1.2924" />
                                   <rect
-                                     class="h"
+                                     class="h crumbs"
                                      x="466.02078"
                                      y="290.49597"
                                      width="25.757486"
@@ -277,7 +232,7 @@
                                      onclick="breadCrumb7()"
                                      style="stroke-width:1.2924" />
                                   <rect
-                                     class="h"
+                                     class="h crumbs"
                                      x="291.60892"
                                      y="304.90247"
                                      width="25.757486"
@@ -287,7 +242,7 @@
                                      onclick="breadCrumb8()"
                                      style="stroke-width:1.2924" />
                                   <rect
-                                     class="h"
+                                     class="h crumbs"
                                      x="281.4234"
                                      y="129.52808"
                                      width="25.757486"
@@ -297,7 +252,7 @@
                                      onclick="breadCrumb9()"
                                      style="stroke-width:1.2924" />
                                   <rect
-                                     class="h"
+                                     class="h crumbs"
                                      x="400.62808"
                                      y="67.091034"
                                      width="25.757486"
@@ -392,9 +347,9 @@
         </div>  
         
       </div>
-      <video class="fullscreen-video" id="myVideo" autoplay="autoplay" muted loop>
+      <!-- <video class="fullscreen-video" id="myVideo" autoplay="autoplay" muted loop>
          <source src="img/bg.m4v">   
-     </video>
+     </video> -->
      
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="js/fence.js"></script>

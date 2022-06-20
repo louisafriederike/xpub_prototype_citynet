@@ -1,10 +1,6 @@
-var distance;
-var distance2;
-var distance3;
-var distance4;
-var distance5;
 
-window.onload = function() {
+// window.onload = function() {
+  $(document).ready(function(){
     var startPos;
     var node1Lat;
     var node1Long;
@@ -18,10 +14,15 @@ window.onload = function() {
     var node5Long;
     var node6Lat;
     var node6Long;
+    var distance;
+    var distance2;
+    var distance3;
+    var distance4;
+    var distance5;
 
-  
+    
     if (navigator.geolocation) {
-
+      
       node1Lat = 51.916080703822985;
       node1Long = 4.476145158543535;
 
@@ -146,7 +147,7 @@ window.onload = function() {
 
       });
     }
-  };
+  });
 
   
   

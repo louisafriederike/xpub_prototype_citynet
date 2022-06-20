@@ -176,6 +176,21 @@ var loc2 = new Audio('./audio/loc2.WAV');
 var loc3 = new Audio('./audio/loc3.wav');
 var loc4 = new Audio('./audio/loc4.wav');
 var loc5 = new Audio('./audio/loc5.wav');
+r1 = document.querySelector('#rect13');
+r2 = document.querySelector('#rect23');
+r3 = document.querySelector('#rect35');
+r4 = document.querySelector('#rect37');
+r5 = document.querySelector('#rect27');
+r6 = document.querySelector('#rect39');
+r7 = document.querySelector('#rect41');
+r8 = document.querySelector('#rect43');
+r9 = document.querySelector('#rect19');
+r10 = document.querySelector('#rect45');
+r11 = document.querySelector('#rect47');
+r12 = document.querySelector('#rect17');
+r13 = document.querySelector('#rect49');
+r14 = document.querySelector('#rect51');
+r15 = document.querySelector('#rect15');
 
 
 function playTrack1(){
@@ -194,6 +209,12 @@ function breadCrumb1(){
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
+    
+    fillCrumbs();
+    // document.querySelector("#rect23").style.fill = "pink";
+    r2.style.fill = "#ff2400";
+
+
 }
 
 function breadCrumb2(){
@@ -202,6 +223,9 @@ function breadCrumb2(){
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
+
+    fillCrumbs();
+    r3.style.fill = "#ff2400";
 }
 
 function breadCrumb3(){
@@ -210,6 +234,8 @@ function breadCrumb3(){
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
+    fillCrumbs();
+    r4.style.fill = "#ff2400";
 }
 
 function breadCrumb4(){
@@ -218,6 +244,8 @@ function breadCrumb4(){
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
+    fillCrumbs();
+    r6.style.fill = "#ff2400";
 }
 
 function breadCrumb5(){
@@ -226,6 +254,8 @@ function breadCrumb5(){
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
+    fillCrumbs();
+    r7.style.fill = "#ff2400";
 }
 
 function breadCrumb6(){
@@ -234,6 +264,8 @@ function breadCrumb6(){
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
+    fillCrumbs();
+    r8.style.fill = "#ff2400";
 }
 
 function breadCrumb7(){
@@ -242,6 +274,8 @@ function breadCrumb7(){
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
+    fillCrumbs();
+    r10.style.fill = "#ff2400";
 }
 
 function breadCrumb8(){
@@ -250,6 +284,8 @@ function breadCrumb8(){
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
+    fillCrumbs();
+    r11.style.fill = "#ff2400";
 }
 
 function breadCrumb9(){
@@ -258,6 +294,8 @@ function breadCrumb9(){
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
+    fillCrumbs();
+    r13.style.fill = "#ff2400";
 }
 
 function breadCrumb10(){
@@ -266,6 +304,8 @@ function breadCrumb10(){
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
+    fillCrumbs();
+    r14.style.fill = "#ff2400";
 }
 
 function breadCrumb11(){
@@ -314,4 +354,11 @@ function objective5(){
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
+}
+
+function fillCrumbs(){
+    var crumbs = document.querySelectorAll(".crumbs");
+    crumbs.forEach(function(crumb){
+        crumb.style.fill = "#818779";
+    });
 }

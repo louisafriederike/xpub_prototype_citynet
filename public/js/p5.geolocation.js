@@ -33,7 +33,8 @@ p5.prototype.getCurrentPosition = function(callback, errorCallback) {
   var ret = {};
   var self = this;
 
-  if (navigator.geolocation) {
+  // if (navigator.geolocation) {
+    if (true){
     navigator.geolocation.getCurrentPosition(success, geoError);
   }else{
     geoError("geolocation not available");
@@ -46,7 +47,7 @@ p5.prototype.getCurrentPosition = function(callback, errorCallback) {
   }
 
   function success(position){
-      // console.log(position);
+      console.log(position);
 
       //get the entire position object....
       // //see the p5.js github libraries wiki page for more info on what is going on here.
